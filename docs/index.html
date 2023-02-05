@@ -2,22 +2,70 @@
 <html>
 
   <head>
+    <style>
+      body {
+        padding-top: 40px;
+        padding-bottom:40px;
+      }
+    </style> 
 
     <title> Josseph Downs</title>
+    <meta charset="utf-8">
 
   </head>
 
   <body>
 
     <div class="banner">
-      <img src="/fallen_angel.jpg" alt="profile picture">
+      <img src="/fallen_angel.jpg" alt="profile picture" class="banner-image">
+      <style>
+        .banner-image {
+          width: 128px;
+          height: 128px;
+          object-fit: cover;
+          border-radius: 128px;
+        }
+
+        .thumbnail {
+          width: 48px;
+          height: 48px;
+          border-radius: 48px;
+          object-fit: cover;
+        }
+
+        body {
+          background-color: #005f73;
+        }
+
+        .name {
+          color: #bb3e03
+        }
+
+        .social-icons a {
+          color: #ee9b00;
+          text-decoration: none;
+        }
+
+        .link {
+          background-color: #f9bc60;
+        }
+
+        .link a {
+          color: #005f73;
+          text-decoration: none;
+        }
+
+        .link b {
+          color: #0a9396;
+        }
+      </style>
     </div>
 
     <div class="name">
       <h1>Josseph Downs, Tech Apprentice</h1>
     </div>
 
-    <div class="description">
+    <div class="social-icons">
       <a href="https://en.wikipedia.org/wiki/Art" target="_blank"> Art.</a>
       <a href="https://en.wikipedia.org/wiki/Film" target="_blank"> Film.</a>
       <a href="https://en.wikipedia.org/wiki/Photography" target="_blank"> Photography.</a>
@@ -25,31 +73,32 @@
       <a href="https://en.wikipedia.org/wiki/Music" target="_blank"> Music.</a>
     </div>
 
-    <div class="social-icons">
-      <div>
-        <div>
-          <div>
-            <a href="https://www.instagram.com/0zymanndias" target="_blank">
+    <div class="link">
+      <img class="thumbnail" src="instagram.jpg">
+      <a href="https://www.instagram.com/0zymanndias" target="_blank">
               Instagram</a>
-          </div>
+    </div>
 
-          <div>
-            <a href="https://www.youtube.com/channel/UC0PlUdv8cfzjs9bwFeSiPQw" target="_blank">
+    <div class="link">
+      <img class="thumbnail" src="youtube.jpg">
+      <a href="https://www.youtube.com/channel/UC0PlUdv8cfzjs9bwFeSiPQw" target="_blank">
               Youtube</a>
-          </div>
+    </div>
 
-          <div>
-            <a href="https://m.soundcloud.com/0zymanndias" target="_blank">
+    <div class="link">
+      <img class="thumbnail" src="soundcloud.jpg">
+      <a href="https://m.soundcloud.com/0zymanndias" target="_blank">
               soundcloud</a>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div>
       <div>
-        <div><a>Contact</a></div>
-        <div><a>About</a></div>
+        <div class="contact">
+          <a>Contact</a>
+        </div>
+        <div class="about">
+          <a>About</a>
+        </div>
         </div>
     </div>
   </body>
