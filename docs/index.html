@@ -6,8 +6,68 @@
       body {
         padding-top: 40px;
         padding-bottom:40px;
+        background-color: #005f73;
+        display: flex;
+        justify-content: center;
       }
-    </style> 
+
+      .banner-image {
+         width: 128px;
+        height: 128px;
+        object-fit: cover;
+        border-radius: 128px;
+        }
+
+      .thumbnail {
+        width: 48px;
+        height: 48px;          
+        border-radius: 48px;
+        object-fit: cover;
+        }
+
+      .name {
+        color: #bb3e03;
+        display: flex;
+        justify-content: center;
+        }
+
+      .social-icons a {
+        color: #ee9b00;
+        text-decoration: none;
+      }
+
+      .link {
+          background-color: #f9bc60;
+          display: flex;
+          align-items: center;
+          padding: 5px;
+        }
+
+      .link a {
+          color: #005f73;
+          text-decoration: none;
+          text-align: center;
+          flex-grow: 1;
+        }
+      .items {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 640px;
+        max-width: 640px;
+        flex-grow: 1;
+      }
+
+      .banner {
+        display: flex;
+        justify-content: center;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: space-around;
+      }
+      </style>
 
     <title> Josseph Downs</title>
     <meta charset="utf-8">
@@ -16,51 +76,12 @@
 
   <body>
 
+  <div class="items">
+
     <div class="banner">
       <img src="/fallen_angel.jpg" alt="profile picture" class="banner-image">
-      <style>
-        .banner-image {
-          width: 128px;
-          height: 128px;
-          object-fit: cover;
-          border-radius: 128px;
-        }
-
-        .thumbnail {
-          width: 48px;
-          height: 48px;
-          border-radius: 48px;
-          object-fit: cover;
-        }
-
-        body {
-          background-color: #005f73;
-        }
-
-        .name {
-          color: #bb3e03
-        }
-
-        .social-icons a {
-          color: #ee9b00;
-          text-decoration: none;
-        }
-
-        .link {
-          background-color: #f9bc60;
-        }
-
-        .link a {
-          color: #005f73;
-          text-decoration: none;
-        }
-
-        .link b {
-          color: #0a9396;
-        }
-      </style>
     </div>
-
+      
     <div class="name">
       <h1>Josseph Downs, Tech Apprentice</h1>
     </div>
@@ -76,30 +97,30 @@
     <div class="link">
       <img class="thumbnail" src="instagram.jpg">
       <a href="https://www.instagram.com/0zymanndias" target="_blank">
-              Instagram</a>
+                Instagram</a>
     </div>
 
     <div class="link">
       <img class="thumbnail" src="youtube.jpg">
       <a href="https://www.youtube.com/channel/UC0PlUdv8cfzjs9bwFeSiPQw" target="_blank">
-              Youtube</a>
+                Youtube</a>
     </div>
 
     <div class="link">
       <img class="thumbnail" src="soundcloud.jpg">
       <a href="https://m.soundcloud.com/0zymanndias" target="_blank">
-              soundcloud</a>
+                soundcloud</a>
     </div>
 
     <div>
       <div>
         <div class="contact">
-          <a>Contact</a>
+            <a>Contact</a>
         </div>
         <div class="about">
-          <a>About</a>
-        </div>
+            <a>About</a>
         </div>
     </div>
+  </div>
   </body>
 </html>
