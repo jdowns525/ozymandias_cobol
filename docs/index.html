@@ -12,11 +12,16 @@
       }
 
       .banner-image {
-         width: 128px;
-        height: 128px;
+        width: 158px;
+        height: 158px;
         object-fit: cover;
         border-radius: 128px;
+        border: 5px solid #94d2bd;
+        transition: all .5s;
         }
+      .banner-image:hover {
+        transform: scale(1.5) rotate(180deg)
+      }
 
       .thumbnail {
         width: 48px;
@@ -41,6 +46,7 @@
           display: flex;
           align-items: center;
           padding: 5px;
+          border-radius: 10px;
         }
 
       .link a {
@@ -112,15 +118,6 @@
                 soundcloud</a>
     </div>
 
-    <div>
-      <div>
-        <div class="contact">
-            <a>Contact</a>
-        </div>
-        <div class="about">
-            <a>About</a>
-        </div>
-    </div>
   </div>
   </body>
 </html>
