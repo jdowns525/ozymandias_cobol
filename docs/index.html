@@ -17,6 +17,7 @@
         object-fit: cover;
         border-radius: 128px;
         border: 5px solid #94d2bd;
+        box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
         transition: all .5s;
         }
       .banner-image:hover {
@@ -28,7 +29,12 @@
         height: 48px;          
         border-radius: 48px;
         object-fit: cover;
+        transition: all .5s;
         }
+
+      .thumbnail:hover {
+        transform: scale(1.1);
+      }
 
       .name {
         color: #bb3e03;
@@ -41,13 +47,21 @@
         text-decoration: none;
       }
 
+
       .link {
           background-color: #f9bc60;
           display: flex;
           align-items: center;
           padding: 5px;
           border-radius: 10px;
+          font-size: 20px;
+          box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+          transition: all .5s;
         }
+
+      .link:hover {
+        transform: scale(1.1);
+      }
 
       .link a {
           color: #005f73;
@@ -70,8 +84,38 @@
       }
 
       .social-icons {
+        background-color: #ae2012;
         display: flex;
         justify-content: space-around;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 15px;
+        box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+        transition: all .5s;
+      }
+      .social-icons:hover {
+        transform: scale(1.1);
+      }
+
+      .CONTACT a {
+        color: #001219;
+        text-decoration: none;
+        text-align: center;
+        flex-grow: 1;
+      }
+
+      .CONTACT {
+        background-color: #94d2bd;
+          display: flex;
+          align-items: center;
+          padding: 5px;
+          border-radius: 10px;
+          font-size: 20px;
+          box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+          transition: all .5s;
+      }
+      .CONTACT:hover {
+        transform: scale(1.1)
       }
       </style>
 
@@ -85,7 +129,7 @@
   <div class="items">
 
     <div class="banner">
-      <img src="/fallen_angel.jpg" alt="profile picture" class="banner-image">
+      <img src="fallen_angel.jpg" alt="profile picture" class="banner-image">
     </div>
       
     <div class="name">
@@ -93,11 +137,11 @@
     </div>
 
     <div class="social-icons">
-      <a href="https://en.wikipedia.org/wiki/Art" target="_blank"> Art.</a>
-      <a href="https://en.wikipedia.org/wiki/Film" target="_blank"> Film.</a>
-      <a href="https://en.wikipedia.org/wiki/Photography" target="_blank"> Photography.</a>
-      <a href="https://en.wikipedia.org/wiki/Technology" target="_blank"> Tech.</a>
-      <a href="https://en.wikipedia.org/wiki/Music" target="_blank"> Music.</a>
+      <a href="https://en.wikipedia.org/wiki/Art" target="_blank"> ART.</a>
+      <a href="https://en.wikipedia.org/wiki/Film" target="_blank"> FILM.</a>
+      <a href="https://en.wikipedia.org/wiki/Photography" target="_blank"> PHOTOGRAPHY.</a>
+      <a href="https://en.wikipedia.org/wiki/Technology" target="_blank"> TECH.</a>
+      <a href="https://en.wikipedia.org/wiki/Music" target="_blank"> MUSIC.</a>
     </div>
 
     <div class="link">
@@ -115,7 +159,10 @@
     <div class="link">
       <img class="thumbnail" src="soundcloud.jpg">
       <a href="https://m.soundcloud.com/0zymanndias" target="_blank">
-                soundcloud</a>
+                Soundcloud</a>
+    </div>
+    <div class="CONTACT">
+      <a href="mailto:downsjosseph@gmail.com" target="_blank">CONTACT</a>
     </div>
 
   </div>
