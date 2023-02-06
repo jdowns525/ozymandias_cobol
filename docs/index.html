@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   <head>
     <style>
       body {
-        padding-top: 40px;
+        
+        background: linear-gradient(90deg, #BB3E03, #EE9B00, #005F73);
+      }
+      
+      .background--custom {
+      background: linear-gradient(90deg, #BB3E03, #EE9B00, #005F73);
+      padding-top: 40px;
         padding-bottom:40px;
         background-color: #005f73;
         display: flex;
         justify-content: center;
-        background: linear-gradient(90deg, #BB3E03, #EE9B00, #005F73);
+      background-size: 300% 300%;
+      animation: gradient 2s alternate infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0%;
       }
-      
+      100% {
+        background-position: 100%;
+      }
+    }
+
       .banner-image {
         width: 158px;
         height: 158px;
@@ -129,7 +149,9 @@
 
   <body>
 
-  <div class="items">
+    <div class="background--custom">
+    <div>
+    <div class="items">
 
     <div class="banner">
       <img src="fallen_angel.jpg" alt="profile picture" class="banner-image">
@@ -166,6 +188,9 @@
     </div>
     <div class="CONTACT">
       <a href="mailto:downsjosseph@gmail.com" target="_blank">CONTACT</a>
+    </div>
+    </div>
+        </div>
     </div>
 
   </div>
