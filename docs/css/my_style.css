@@ -1,10 +1,11 @@
 body {
   background: black;
   font-family: 'Anton', sans-serif;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: flex;
   margin: 0 auto;
+  overflow: auto;
 
 }
 
@@ -73,6 +74,7 @@ header {
     left: 0;
     height: 100%;
     width: 100%;
+    overflow: auto;
   }
 @keyframes gradient {
   0% {
@@ -84,8 +86,8 @@ header {
 }
 
   .banner-image {
-    width: 158px;
-    height: 158px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 128px;
     border: 5px solid #94d2bd;
@@ -95,6 +97,12 @@ header {
 
   .banner-image:hover {
     transform: scale(1.5) rotate(180deg)
+  }
+
+  .banner {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
   }
 
   .thumbnail {
@@ -153,12 +161,6 @@ header {
     flex-grow: 1;
     text-shadow: 2px 2px 4px black
     ;
-  }
-
-  .banner {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
   }
 
   .social-icons {
