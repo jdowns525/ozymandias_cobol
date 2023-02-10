@@ -165,7 +165,7 @@ header {
   }
 
   .social-icons {
-    background-color: #ae2012;
+    background-color: #ae2012 transparent;
     display: flex;
     justify-content: space-around;
     padding: 5.5px;
@@ -179,14 +179,14 @@ header {
   }
 
   .CONTACT a {
-    color: #ae2012;
+    color: #ee9b00;
     text-decoration: none;
     text-align: center;
     flex-grow: 1;
   }
 
   .CONTACT {
-    background-color: #94d2bd;
+    background-color: #ae2012 transparent;
       display: flex;
       align-items: center;
       padding: 5px;
