@@ -12,11 +12,65 @@
         padding-top: 60px;
         padding-bottom: 60px;
         display: flex;
-        margin: 20px;
+        margin: 0px;
         margin-top: 50px;
         margin-bottom: 30px;
   
       }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      header {
+        background-color: lightblue;
+        padding: 20px;
+        text-align: center;
+        }
+
+        header h1 {
+          font-size: 36px;
+          margin: 0;
+        }
+
+        nav {
+          background-color: gray;
+          padding: 10px;
+          text-align: center;
+        }
+
+        nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        nav li {
+          display: inline-block;
+          margin-right: 20px;
+        }
+
+        nav a {
+          color: white;
+          text-decoration: none;
+        }
+
+        section {
+          padding: 20px;
+        }
+
+        @media only screen and (max-width: 600px) {
+          header h1 {
+            font-size: 24px;
+          }
+
+          nav {
+            display: none;
+          }
+        }
+
       
       .background--custom {
       background: linear-gradient(90deg, #BB3E03, #94d2bd, black, #ee9b00);
@@ -154,7 +208,7 @@
       </style>
 
     <title>Josseph Downs</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
   </head>
