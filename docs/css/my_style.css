@@ -122,6 +122,7 @@ header {
     display: flex;
     justify-content: center;
     text-shadow: 2px 2px 4px black;
+    font-size: 30px;
     }
 
   .social-icons a {
@@ -131,12 +132,12 @@ header {
 
 
   .link {
-    background-color: #f9bc60;
+    background-color: black transparent;
     display: flex;
     align-items: center;
     padding: 3px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 18px;
     box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
     
     transition: all .5s;
