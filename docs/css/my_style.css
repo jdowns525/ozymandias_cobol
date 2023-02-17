@@ -64,7 +64,7 @@ header {
 
 
   .background--custom {
-    background: linear-gradient(90deg, #780116, #F7B538, #DB7C26, #D8572A, );
+    background: linear-gradient(90deg, #780116, #F7B538, #DB7C26, #D8572A );
     background-size: 300% 300%;
     animation: gradient 5s alternate infinite;
     position: absolute;
