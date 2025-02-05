@@ -1,76 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Josseph Downs</title>
-    <link rel="icon" href="pokeball.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/my_style.css">
-    <!-- Preconnect and load Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Archive</title>
+    <link rel="icon" href="pokeball.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/my_style.css" />
+    <!-- Since we're using Courier New for the entire document, any other font links have been removed -->
   </head>
   <body>
     <div class="window">
       <!-- Title Bar -->
       <div class="title-bar">
-        <div class="title">Josseph Downs</div>
         <div class="window-controls">
           <button class="control-btn">_</button>
           <button class="control-btn">□</button>
           <button class="control-btn">X</button>
         </div>
+        <div class="title-text">ARCHIVE</div>
       </div>
       <!-- Menu Bar -->
       <div class="menu-bar">
         <ul>
-          <li>File</li>
-          <li>Edit</li>
-          <li>View</li>
-          <li>Help</li>
+          <li>
+            <a href="https://www.poetryfoundation.org/poems/46565/ozymandias" target="_blank" class="link-text">
+              HELP?<span class="blinking-cursor">_</span>
+            </a>
+          </li>
         </ul>
       </div>
       <!-- Content Area -->
       <div class="content">
-        <div class="banner">
-          <img src="fallen_angel.jpg" alt="Profile Picture" class="banner-image">
-        </div>
-        <div class="name">
-          <a href="#">Josseph Downs</a>
-        </div>
+        <div class="header">OZYMANDIAS</div>
+        <!-- Social Icons Section as clickable text links -->
         <div class="social-icons">
-          <a href="https://www.youtube.com/channel/UC0PlUdv8cfzjs9bwFeSiPQw" target="_blank">YOUTUBE CHANNEL</a>
-          <a href="https://www.instagram.com/0zymanndias" target="_blank">PHOTOGRAPHY</a>
-          <a href="https://github.com/jdowns525" target="_blank">TECH</a>
-          <a href="https://m.soundcloud.com/0zymanndias" target="_blank">SOUNDCLOUD</a>
+          <a href="https://www.youtube.com/channel/UC0PlUdv8cfzjs9bwFeSiPQw" target="_blank" class="link-text">YOUTUBE CHANNEL</a>
+          <a href="https://www.instagram.com/0zymanndias" target="_blank" class="link-text">PHOTOGRAPHY</a>
+          <a href="https://github.com/jdowns525" target="_blank" class="link-text">TECH</a>
+          <a href="https://m.soundcloud.com/0zymanndias" target="_blank" class="link-text">SOUNDCLOUD</a>
         </div>
+        <!-- Links Section as clickable text links -->
         <div class="links">
           <div class="link">
-            <img class="thumbnail" src="maze.jpg" alt="Medium Blog">
-            <a href="https://medium.com/@downsjosseph" target="_blank">Medium Blog</a>
+            <a href="https://medium.com/@downsjosseph" target="_blank" class="link-text">MEDIUM BLOG</a>
           </div>
           <div class="link">
-            <img class="thumbnail" src="chicago.ico" alt="Fuji Simulation Files">
-            <a href="https://github.com/jdowns525/fujifilm_simulations" target="_blank">Fuji Simulation Files</a>
+            <a href="https://github.com/jdowns525/fujifilm_simulations" target="_blank" class="link-text">FUJI SIMULATION FILES</a>
           </div>
           <div class="link">
-            <img class="thumbnail" src="charmander.ico" alt="LinkedIn">
-            <a href="https://www.linkedin.com/in/jossephdowns/" target="_blank">LinkedIn</a>
-          </div>
-          <div class="link">
-            <img class="thumbnail" src="essay.jpg" alt="Startup Ideas">
-            <a href="http://paulgraham.com/startupideas.html" target="_blank">How to Get Start Up Ideas</a>
-          </div>
-          <div class="link">
-            <img class="thumbnail" src="essay.jpg" alt="Why Software Is Eating the World">
-            <a href="https://a16z.com/2011/08/20/why-software-is-eating-the-world/" target="_blank">Why Software Is Eating the World</a>
+            <a href="https://www.linkedin.com/in/jossephdowns/" target="_blank" class="link-text">LINKEDIN</a>
           </div>
         </div>
+        <!-- Contact Section as clickable text link -->
         <div class="contact">
-          <a href="mailto:downsjosseph@gmail.com" target="_blank">CONTACT</a>
+          <a href="mailto:downsjosseph@gmail.com" target="_blank" class="link-text">CONTACT</a>
         </div>
       </div>
     </div>
+
+    <!-- JavaScript to Ensure the Control Buttons are Clickable -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var controlButtons = document.querySelectorAll('.control-btn');
+        controlButtons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var btnType = this.textContent;
+            if (btnType === '_') {
+              alert('Minimize clicked!');
+            } else if (btnType === '□') {
+              alert('Maximize clicked!');
+            } else if (btnType === 'X') {
+              alert('Close clicked!');
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

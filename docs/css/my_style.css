@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Basic Reset & Global Styles
+   Reset & Global Styles
    ========================================================================== */
    * {
     margin: 0;
@@ -8,194 +8,157 @@
   }
   
   body {
-    background-color: #008080; /* Classic teal */
-    font-family: 'MS Sans Serif', Tahoma, sans-serif;
-    padding: 20px;
+    background-color: #000;                             /* Deep black background */
+    color: #33FF33;                                     /* Neon green text */
+    font-family: "Courier New", Courier, monospace;     /* Monospace for entire document */
+    font-size: 16px;                                    /* Uniform font size */
+    line-height: 1.5;
+    padding: 10px;
+    text-transform: uppercase;                          /* All text in uppercase */
   }
   
   /* ==========================================================================
-     Vintage Window Container
+     Window Container (Main Frame)
      ========================================================================== */
   .window {
-    background-color: #c0c0c0;
-    width: 90%;
     max-width: 800px;
     margin: 20px auto;
-    border: 2px solid #404040;
-    box-shadow: 4px 4px 0px #404040;
-    display: flex;
-    flex-direction: column;
+    padding: 10px;
+    border: 2px solid #33FF33;
   }
   
   /* ==========================================================================
-     Title Bar
+     Title Bar & Window Controls
      ========================================================================== */
   .title-bar {
-    background: linear-gradient(to bottom, #000080, #0000cd);
-    color: #fff;
-    padding: 6px 10px;
+    background-color: #000;
+    border-bottom: 2px solid #33FF33;
+    padding: 5px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
   
-  .title-bar .title {
-    font-family: 'Anton', sans-serif;
-    font-size: 1.2rem;
-  }
-  
   .window-controls {
-    display: flex;
-    gap: 4px;
+    /* No additional styling required */
   }
   
-  .window-controls .control-btn {
-    width: 24px;
-    height: 24px;
-    background-color: #c0c0c0;
-    border: 2px outset #fff;
-    font-size: 0.9rem;
+  .control-btn {
+    background-color: #000;
+    border: 1px solid #33FF33;
+    color: #33FF33;
+    padding: 2px 6px;
+    margin-right: 5px;
     cursor: pointer;
-    padding: 0;
+    font-size: 14px;
   }
   
-  .window-controls .control-btn:active {
-    border: 2px inset #fff;
+  .control-btn:hover {
+    background-color: #33FF33;
+    color: #000;
+  }
+  
+  .title-text {
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 18px;
   }
   
   /* ==========================================================================
      Menu Bar
      ========================================================================== */
   .menu-bar {
-    background-color: #c0c0c0;
-    border-bottom: 2px solid #404040;
-    padding: 4px 10px;
+    background-color: #000;
+    border-bottom: 2px solid #33FF33;
+    padding: 5px;
+    text-align: center;
   }
   
   .menu-bar ul {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: inline-block;
   }
   
-  .menu-bar ul li {
-    font-size: 0.9rem;
+  .menu-bar li {
+    display: inline;
+    margin: 0 10px;
     cursor: pointer;
+  }
+  
+  /* Underline on hover for menu items */
+  .menu-bar li:hover {
+    text-decoration: underline;
+  }
+  
+  /* ==========================================================================
+     Blinking Cursor (Old Waiting Blinking Green Space)
+     ========================================================================== */
+  @keyframes blink {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .blinking-cursor {
+    color: #33FF33;
+    font-size: 16px;
+    animation: blink 1s step-start infinite;
   }
   
   /* ==========================================================================
      Content Area
      ========================================================================== */
   .content {
-    background-color: #fff;
     padding: 10px;
-    flex: 1;
   }
   
-  /* ==========================================================================
-     Banner & Profile Image
-     ========================================================================== */
-  .banner {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-  
-  .banner-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 2px solid #404040;
-    box-shadow: 2px 2px 0px #404040;
-  }
-  
-  /* ==========================================================================
-     Name
-     ========================================================================== */
-  .name {
+  .header {
+    font-size: 24px;
     text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin: 20px 0;
   }
   
   /* ==========================================================================
-     Social Icons
+     Social Icons Section
      ========================================================================== */
   .social-icons {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-  }
-  
-  .social-icons a {
-    color: #0000ee;
-    text-decoration: none;
-  }
-  
-  .social-icons a:hover {
-    text-decoration: underline;
+    text-align: center;
+    margin: 20px 0;
   }
   
   /* ==========================================================================
-     Link Blocks
+     Links Section
      ========================================================================== */
   .links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 10px;
+    text-align: center;
+    margin: 20px 0;
   }
   
   .link {
-    display: flex;
-    align-items: center;
-    background-color: #c0c0c0;
-    border: 2px outset #fff;
-    padding: 4px;
-    box-shadow: 2px 2px 0px #404040;
-  }
-  
-  .link:hover {
-    border: 2px inset #fff;
-  }
-  
-  .link .thumbnail {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    margin-right: 8px;
-  }
-  
-  .link a {
-    color: #000;
-    text-decoration: none;
-    font-size: 0.9rem;
+    margin: 5px;
   }
   
   /* ==========================================================================
-     Contact Button
+     Contact Section
      ========================================================================== */
   .contact {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   
-  .contact a {
-    display: inline-block;
-    padding: 6px 12px;
-    background-color: #c0c0c0;
-    border: 2px outset #fff;
-    box-shadow: 2px 2px 0px #404040;
+  /* ==========================================================================
+     Link Text Styling (Plain clickable text with underline on hover)
+     ========================================================================== */
+  .link-text {
+    color: #33FF33;
     text-decoration: none;
-    color: #000;
-    font-size: 1rem;
-    cursor: pointer;
+    transition: text-decoration 0.3s, color 0.3s;
+    font-size: 16px;
+    padding: 5px;
   }
   
-  .contact a:active {
-    border: 2px inset #fff;
+  .link-text:hover {
+    text-decoration: underline;
+    color: #33FF33;
   }
   
   /* ==========================================================================
@@ -204,29 +167,19 @@
   @media (max-width: 600px) {
     .window {
       width: 95%;
+      padding: 5px;
     }
-  
-    .banner-image {
-      width: 80px;
-      height: 80px;
+    .menu-bar li {
+      margin: 0 5px;
+      font-size: 14px;
     }
-  
-    .name {
-      font-size: 1.2rem;
+    .header {
+      font-size: 20px;
     }
-  
-    .social-icons {
-      flex-direction: column;
-      gap: 4px;
-    }
-  
-    .menu-bar ul {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .menu-bar ul li {
-      padding: 2px 0;
+    .social-icons,
+    .links,
+    .contact {
+      font-size: 14px;
     }
   }
   
