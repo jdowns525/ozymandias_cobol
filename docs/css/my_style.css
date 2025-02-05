@@ -25,11 +25,11 @@
   }
   
   .title-text {
-    color: #FFF;
+    color:#33FF33;
   }
   
   .title-right {
-    color: #999;
+    color: #33FF33;
   }
   
   /* ==========================================================================
@@ -37,7 +37,7 @@
      ========================================================================== */
   .command-bar {
     padding: 5px 15px;
-    color: #FFF;
+    color: #33FF33;
     font-weight: bold;
   }
   
@@ -71,7 +71,7 @@
   
   /* Syntax Colors */
   .keyword {
-    color: #FF4500; /* Orange-Red for COBOL commands */
+    color: #33FF33; /* Orange-Red for COBOL commands */
     font-weight: bold;
   }
   
@@ -80,15 +80,15 @@
   }
   
   .header {
-    color: #00FFFF; /* Cyan for section headers */
+    color: #33FF33; /* Cyan for section headers */
   }
   
   .error {
-    color: #FF0000; /* Red for errors */
+    color: #33FF33; /* Red for errors */
   }
   
   .white {
-    color: #FFFFFF; /* White for default text */
+    color: #33FF33; /* White for default text */
   }
   
   .green {
@@ -96,11 +96,11 @@
   }
   
   .cyan {
-    color: #00FFFF; /* Cyan for information */
+    color: #33FF33; /* Cyan for information */
   }
   
   .yellow {
-    color: #FFD700; /* Yellow for special words */
+    color: #33FF33; /* Yellow for special words */
   }
   
   /* ==========================================================================
