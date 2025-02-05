@@ -2,13 +2,13 @@
    Global Styles - COBOL Terminal Look
    ========================================================================== */
    body {
-    background-color: #000; /* Black terminal background */
-    color: #33FF33; /* Default green text */
-    font-family: "Courier New", Courier, monospace; /* Classic monospaced font */
-    font-size: 16px; /* Uniform font size */
+    background-color: #000; 
+    color: #33FF33; 
+    font-family: "Courier New", Courier, monospace; 
+    font-size: 16px; 
     line-height: 1.5;
     padding: 10px;
-    text-transform: uppercase; /* Everything in uppercase */
+    text-transform: uppercase; 
   }
   
   /* ==========================================================================
@@ -71,37 +71,36 @@
   
   /* Syntax Colors */
   .keyword {
-    color: #33FF33; /* Orange-Red for COBOL commands */
+    color: #33FF33; 
     font-weight: bold;
   }
   
   .comment {
-    color: #00FF00; /* Green for comments */
+    color: #00FF00; 
   }
   
   .header {
-    color: #33FF33; /* Cyan for section headers */
+    color: #33FF33; 
   }
   
   .error {
-    color: #33FF33; /* Red for errors */
+    color: #33FF33; 
   }
   
   .white {
-    color: #33FF33; /* White for default text */
+    color: #33FF33; 
   }
   
   .green {
-    color: #33FF33; /* Terminal green */
+    color: #33FF33; 
   }
   
   .cyan {
-    color: #33FF33; /* Cyan for information */
+    color: #33FF33; 
   }
   
   .yellow {
-    color: #33FF33; /* Yellow for special words */
-  }
+    color: #33FF33; 
   
   /* ==========================================================================
      Links - Underline on Hover
