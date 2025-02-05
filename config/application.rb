@@ -21,8 +21,9 @@ Bundler.require(*Rails.groups)
 
 module FinalProject
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
+    # Update to Rails 7 defaults
+    config.load_defaults 7.0
+
     config.generators do |g|
       g.test_framework nil
       g.factory_bot false
@@ -31,7 +32,13 @@ module FinalProject
       g.javascripts     false
       g.helper          false
     end
-    
+
+    # Fix legacy connection handling deprecation warning
+    config.active_record.legacy_connection_handling = false
+
+    # Fix non-URL-safe CSRF tokens warning
+    config.action_controller.urlsafe_csrf_tokens = true
+
     config.action_controller.default_protect_from_forgery = false
     config.active_record.belongs_to_required_by_default = false
 

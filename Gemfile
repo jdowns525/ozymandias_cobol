@@ -13,6 +13,9 @@ gem 'rails', '~> 7.0.0'
 gem 'sprockets', '< 4'
 gem 'sassc-rails'
 gem 'faker'
+gem 'mutex_m'
+gem 'csv'
+
 
 group :development do
   gem 'htmlbeautifier'

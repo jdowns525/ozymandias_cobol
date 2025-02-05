@@ -135,6 +135,7 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
+    csv (3.3.2)
     date (3.4.1)
     debug_inspector (1.2.0)
     devise (4.9.4)
@@ -231,6 +232,7 @@ GEM
     msgpack (1.7.5)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
+    mutex_m (0.3.0)
     net-http (0.6.0)
       uri
     net-imap (0.5.5)
@@ -421,6 +423,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara
+  csv
   dotenv-rails
   draft_generators!
   factory_bot_rails
@@ -430,6 +433,7 @@ DEPENDENCIES
   http
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  mutex_m
   nokogiri (>= 1.10.8)
   pg
   pry-rails
