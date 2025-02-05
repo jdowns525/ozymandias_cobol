@@ -1,201 +1,232 @@
-body {
-  background: black;
-  font-family: 'Anton', sans-serif;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  display: flex;
-  margin: 0 auto;
-  overflow: auto;
-
-}
-
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-header {
-  background-color: lightblue;
-  padding: 20px;
-  text-align: center;
-  }
-
-  header h1 {
-    font-size: 36px;
-    margin: 0;
-  }
-
-  nav {
-    background-color: gray;
-    padding: 10px;
-    text-align: center;
-  }
-
-  nav ul {
-    list-style: none;
+/* ==========================================================================
+   Basic Reset & Global Styles
+   ========================================================================== */
+   * {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: space-between;
+    box-sizing: border-box;
   }
-
-  nav li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
-
-  section {
+  
+  body {
+    background-color: #008080; /* Classic teal */
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
     padding: 20px;
   }
-
-  @media only screen and (max-width: 600px) {
-  header h1 {
-    font-size: 24px;
-    }
-
-  nav {
-    display: none;
-    }
-  }
-
-
-  .background--custom {
-    background: linear-gradient(90deg, #780116, #F7B538, #DB7C26, #D8572A );
-    background-size: 300% 300%;
-    animation: gradient 5s alternate infinite;
-    position: absolute;
-    justify-content: center;
+  
+  /* ==========================================================================
+     Vintage Window Container
+     ========================================================================== */
+  .window {
+    background-color: #c0c0c0;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid #404040;
+    box-shadow: 4px 4px 0px #404040;
     display: flex;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
+    flex-direction: column;
   }
-@keyframes gradient {
-  0% {
-    background-position: 0%;
+  
+  /* ==========================================================================
+     Title Bar
+     ========================================================================== */
+  .title-bar {
+    background: linear-gradient(to bottom, #000080, #0000cd);
+    color: #fff;
+    padding: 6px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  100% {
-    background-position: 100%;
+  
+  .title-bar .title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.2rem;
   }
-}
-
+  
+  .window-controls {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .window-controls .control-btn {
+    width: 24px;
+    height: 24px;
+    background-color: #c0c0c0;
+    border: 2px outset #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .window-controls .control-btn:active {
+    border: 2px inset #fff;
+  }
+  
+  /* ==========================================================================
+     Menu Bar
+     ========================================================================== */
+  .menu-bar {
+    background-color: #c0c0c0;
+    border-bottom: 2px solid #404040;
+    padding: 4px 10px;
+  }
+  
+  .menu-bar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .menu-bar ul li {
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  /* ==========================================================================
+     Content Area
+     ========================================================================== */
+  .content {
+    background-color: #fff;
+    padding: 10px;
+    flex: 1;
+  }
+  
+  /* ==========================================================================
+     Banner & Profile Image
+     ========================================================================== */
+  .banner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
   .banner-image {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    border-radius: 128px;
-    border: 5px solid #94d2bd;
-    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
-    transition: all .5s;
-    }
-
-  .banner-image:hover {
-    transform: scale(1.5) rotate(180deg)
+    border: 2px solid #404040;
+    box-shadow: 2px 2px 0px #404040;
   }
-
-  .banner {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .thumbnail {
-    width: 38px;
-    height: 38px;          
-    border-radius: 48px;
-    object-fit: cover;
-    transition: all .5s;
-    }
-
-  .thumbnail:hover {
-    transform: scale(1.1);
-  }
-
+  
+  /* ==========================================================================
+     Name
+     ========================================================================== */
   .name {
-    color: white;
-    display: flex;
-    justify-content: center;
-    text-shadow: 2px 2px 4px black;
-    font-size: 30px;
-    }
-
-  .social-icons a {
-    color: #ee9b00;
-    text-decoration: none;
-  }
-
-
-  .link {
-    background-color: black transparent;
-    display: flex;
-    align-items: center;
-    padding: 3px;
-    border-radius: 10px;
-    font-size: 18px;
-    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
-    
-    transition: all .5s;
-  }
-
-  .link:hover {
-    transform: scale(1.1);
-  }
-
-  .link a {
-    color: whitesmoke;
-    text-decoration: none;
     text-align: center;
-    flex-grow: 1;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
   }
-  .items {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    max-width: 640px;
-    max-width: 640px;
-    flex-grow: 1;
-    text-shadow: 2px 2px 4px black
-    ;
-  }
-
+  
+  /* ==========================================================================
+     Social Icons
+     ========================================================================== */
   .social-icons {
-    background-color: #ae2012 transparent;
     display: flex;
     justify-content: space-around;
-    padding: 5.5px;
-    border-radius: 10px;
-    font-size: 17.5px;
-    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
-    transition: all .5s;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
   }
-  .social-icons:hover {
-    transform: scale(1.1);
-  }
-
-  .CONTACT a {
-    color: #ee9b00;
+  
+  .social-icons a {
+    color: #0000ee;
     text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ==========================================================================
+     Link Blocks
+     ========================================================================== */
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .link {
+    display: flex;
+    align-items: center;
+    background-color: #c0c0c0;
+    border: 2px outset #fff;
+    padding: 4px;
+    box-shadow: 2px 2px 0px #404040;
+  }
+  
+  .link:hover {
+    border: 2px inset #fff;
+  }
+  
+  .link .thumbnail {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 8px;
+  }
+  
+  .link a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  /* ==========================================================================
+     Contact Button
+     ========================================================================== */
+  .contact {
     text-align: center;
-    flex-grow: 1;
+    margin-top: 10px;
   }
-
-  .CONTACT {
-    background-color: #ae2012 transparent;
-      display: flex;
-      align-items: center;
-      padding: 5px;
-      border-radius: 10px;
-      font-size: 20px;
-      box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
-      transition: all .5s;
+  
+  .contact a {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #c0c0c0;
+    border: 2px outset #fff;
+    box-shadow: 2px 2px 0px #404040;
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .contact a:active {
+    border: 2px inset #fff;
+  }
+  
+  /* ==========================================================================
+     Responsive Adjustments
+     ========================================================================== */
+  @media (max-width: 600px) {
+    .window {
+      width: 95%;
     }
-    
-  .CONTACT:hover {
-    transform: scale(1.1)
+  
+    .banner-image {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .name {
+      font-size: 1.2rem;
+    }
+  
+    .social-icons {
+      flex-direction: column;
+      gap: 4px;
+    }
+  
+    .menu-bar ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-bar ul li {
+      padding: 2px 0;
+    }
   }
+  
