@@ -3,78 +3,49 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Archive</title>
+    <title>COBOL ARCHIVE</title>
     <link rel="icon" href="pokeball.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/my_style.css" />
-    <!-- Since we're using Courier New for the entire document, any other font links have been removed -->
   </head>
   <body>
-    <div class="window">
-      <!-- Title Bar -->
-      <div class="title-bar">
-        <div class="window-controls">
-          <button class="control-btn">_</button>
-          <button class="control-btn">□</button>
-          <button class="control-btn">X</button>
-        </div>
-        <div class="title-text">ARCHIVE</div>
-      </div>
-      <!-- Menu Bar -->
-      <div class="menu-bar">
-        <ul>
-          <li>
-            <a href="https://www.poetryfoundation.org/poems/46565/ozymandias" target="_blank" class="link-text">
-              HELP?<span class="blinking-cursor">_</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- Content Area -->
-      <div class="content">
-        <div class="header">OZYMANDIAS</div>
-        <!-- Social Icons Section as clickable text links -->
-        <div class="social-icons">
-          <a href="https://www.youtube.com/channel/UC0PlUdv8cfzjs9bwFeSiPQw" target="_blank" class="link-text">YOUTUBE CHANNEL</a>
-          <a href="https://www.instagram.com/0zymanndias" target="_blank" class="link-text">PHOTOGRAPHY</a>
-          <a href="https://github.com/jdowns525" target="_blank" class="link-text">TECH</a>
-          <a href="https://m.soundcloud.com/0zymanndias" target="_blank" class="link-text">SOUNDCLOUD</a>
-        </div>
-        <!-- Links Section as clickable text links -->
-        <div class="links">
-          <div class="link">
-            <a href="https://medium.com/@downsjosseph" target="_blank" class="link-text">MEDIUM BLOG</a>
-          </div>
-          <div class="link">
-            <a href="https://github.com/jdowns525/fujifilm_simulations" target="_blank" class="link-text">FUJI SIMULATION FILES</a>
-          </div>
-          <div class="link">
-            <a href="https://www.linkedin.com/in/jossephdowns/" target="_blank" class="link-text">LINKEDIN</a>
-          </div>
-        </div>
-        <!-- Contact Section as clickable text link -->
-        <div class="contact">
-          <a href="mailto:downsjosseph@gmail.com" target="_blank" class="link-text">CONTACT</a>
-        </div>
-      </div>
+    <!-- Fake COBOL Title Bar -->
+    <div class="title-bar">
+      <span class="title-text">REVEDIT SYS2.JCLLIB(TESTCOB)</span>
+      <span class="title-right">COLUMNS 00001 00072</span>
     </div>
 
-    <!-- JavaScript to Ensure the Control Buttons are Clickable -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var controlButtons = document.querySelectorAll('.control-btn');
-        controlButtons.forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            var btnType = this.textContent;
-            if (btnType === '_') {
-              alert('Minimize clicked!');
-            } else if (btnType === '□') {
-              alert('Maximize clicked!');
-            } else if (btnType === 'X') {
-              alert('Close clicked!');
-            }
-          });
-        });
-      });
-    </script>
+    <!-- Command Line Input -->
+    <div class="command-bar">
+      COMMAND ==> <a href="https://www.poetryfoundation.org/poems/46565/ozymandias" target="_blank" class="link-text">HELP?</a> <span class="blinking-cursor">_</span>
+    </div>
+
+    <!-- Terminal Content (Simulated COBOL Layout) -->
+    <div class="terminal-content">
+      <pre>
+<span class="error">*****</span> <span class="header">****ZAP****AUTOSAVE****** TOP OF DATA ******</span>
+
+<span class="line-number">000001</span> <span class="keyword">// ARCHIVE SYSTEM LOADING</span> (<span class="yellow">SETUP</span>),
+<span class="line-number">000002</span> <span class="comment">//</span>        <span class="white">USER: OZYMANDIAS</span>,
+<span class="line-number">000003</span> <span class="comment">//</span>        <span class="green">ACCESS LEVEL: ADMIN</span>
+<span class="line-number">000004</span> <span class="comment">//</span>        
+<span class="line-number">000005</span> <span class="header">/***************************************/</span>
+<span class="line-number">000006</span> <span class="comment">//</span> <span class="cyan">SOCIAL LINKS:</span>
+<span class="line-number">000007</span> <span class="comment">//</span> <a href="https://www.youtube.com/channel/UC0PlUdv8cfzjs9bwFeSiPQw" target="_blank" class="link-text">YOUTUBE CHANNEL</a>
+<span class="line-number">000008</span> <span class="comment">//</span> <a href="https://www.instagram.com/0zymanndias" target="_blank" class="link-text">PHOTOGRAPHY</a>
+<span class="line-number">000009</span> <span class="comment">//</span> <a href="https://github.com/jdowns525" target="_blank" class="link-text">TECH</a>
+<span class="line-number">000010</span> <span class="comment">//</span> <a href="https://m.soundcloud.com/0zymanndias" target="_blank" class="link-text">SOUNDCLOUD</a>
+<span class="line-number">000011</span> <span class="header">/***************************************/</span>
+
+<span class="line-number">000012</span> <span class="cyan">LINKS:</span>
+<span class="line-number">000013</span> <a href="https://medium.com/@downsjosseph" target="_blank" class="link-text">MEDIUM BLOG</a>
+<span class="line-number">000014</span> <a href="https://github.com/jdowns525/fujifilm_simulations" target="_blank" class="link-text">FUJI SIMULATION FILES</a>
+<span class="line-number">000015</span> <a href="https://www.linkedin.com/in/jossephdowns/" target="_blank" class="link-text">LINKEDIN</a>
+
+<span class="line-number">000016</span> <span class="cyan">CONTACT:</span>
+<span class="line-number">000017</span> <a href="mailto:downsjosseph@gmail.com" target="_blank" class="link-text">EMAIL</a>
+
+<span class="error">*****</span> <span class="header">****ZAP****AUTOSAVE****** BOTTOM OF DATA ******</span>
+      </pre>
+    </div>
   </body>
 </html>

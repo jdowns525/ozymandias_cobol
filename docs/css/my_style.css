@@ -1,184 +1,125 @@
 /* ==========================================================================
-   Reset & Global Styles
+   Global Styles - COBOL Terminal Look
    ========================================================================== */
-   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #000;                             /* Deep black background */
-    color: #33FF33;                                     /* Neon green text */
-    font-family: "Courier New", Courier, monospace;     /* Monospace for entire document */
-    font-size: 16px;                                    /* Uniform font size */
+   body {
+    background-color: #000; /* Black terminal background */
+    color: #33FF33; /* Default green text */
+    font-family: "Courier New", Courier, monospace; /* Classic monospaced font */
+    font-size: 16px; /* Uniform font size */
     line-height: 1.5;
     padding: 10px;
-    text-transform: uppercase;                          /* All text in uppercase */
+    text-transform: uppercase; /* Everything in uppercase */
   }
   
   /* ==========================================================================
-     Window Container (Main Frame)
-     ========================================================================== */
-  .window {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 10px;
-    border: 2px solid #33FF33;
-  }
-  
-  /* ==========================================================================
-     Title Bar & Window Controls
+     Fake Title Bar (like the COBOL environment title in the image)
      ========================================================================== */
   .title-bar {
-    background-color: #000;
-    border-bottom: 2px solid #33FF33;
-    padding: 5px;
     display: flex;
-    align-items: center;
-  }
-  
-  .window-controls {
-    /* No additional styling required */
-  }
-  
-  .control-btn {
+    justify-content: space-between;
+    padding: 5px 15px;
     background-color: #000;
-    border: 1px solid #33FF33;
-    color: #33FF33;
-    padding: 2px 6px;
-    margin-right: 5px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .control-btn:hover {
-    background-color: #33FF33;
-    color: #000;
+    color: #FFF;
+    font-weight: bold;
+    border-bottom: 2px solid #33FF33;
   }
   
   .title-text {
-    margin-left: auto;
+    color: #FFF;
+  }
+  
+  .title-right {
+    color: #999;
+  }
+  
+  /* ==========================================================================
+     Command Line Style
+     ========================================================================== */
+  .command-bar {
+    padding: 5px 15px;
+    color: #FFF;
     font-weight: bold;
-    font-size: 18px;
   }
   
-  /* ==========================================================================
-     Menu Bar
-     ========================================================================== */
-  .menu-bar {
-    background-color: #000;
-    border-bottom: 2px solid #33FF33;
-    padding: 5px;
-    text-align: center;
+  /* Blinking Cursor */
+  .blinking-cursor {
+    color: #33FF33;
+    animation: blink 1s infinite;
   }
   
-  .menu-bar ul {
-    list-style: none;
-    display: inline-block;
-  }
-  
-  .menu-bar li {
-    display: inline;
-    margin: 0 10px;
-    cursor: pointer;
-  }
-  
-  /* Underline on hover for menu items */
-  .menu-bar li:hover {
-    text-decoration: underline;
-  }
-  
-  /* ==========================================================================
-     Blinking Cursor (Old Waiting Blinking Green Space)
-     ========================================================================== */
   @keyframes blink {
-    0%   { opacity: 1; }
-    50%  { opacity: 0; }
+    0% { opacity: 1; }
+    50% { opacity: 0; }
     100% { opacity: 1; }
   }
   
-  .blinking-cursor {
-    color: #33FF33;
-    font-size: 16px;
-    animation: blink 1s step-start infinite;
-  }
-  
   /* ==========================================================================
-     Content Area
+     Terminal Content Styles
      ========================================================================== */
-  .content {
+  .terminal-content {
+    white-space: pre-wrap;
+    font-size: 16px;
     padding: 10px;
   }
   
+  /* Line Numbers */
+  .line-number {
+    color: #00FF00; /* Green */
+    display: inline-block;
+    width: 6ch; /* Fixed width for alignment */
+  }
+  
+  /* Syntax Colors */
+  .keyword {
+    color: #FF4500; /* Orange-Red for COBOL commands */
+    font-weight: bold;
+  }
+  
+  .comment {
+    color: #00FF00; /* Green for comments */
+  }
+  
   .header {
-    font-size: 24px;
-    text-align: center;
-    margin: 20px 0;
+    color: #00FFFF; /* Cyan for section headers */
+  }
+  
+  .error {
+    color: #FF0000; /* Red for errors */
+  }
+  
+  .white {
+    color: #FFFFFF; /* White for default text */
+  }
+  
+  .green {
+    color: #33FF33; /* Terminal green */
+  }
+  
+  .cyan {
+    color: #00FFFF; /* Cyan for information */
+  }
+  
+  .yellow {
+    color: #FFD700; /* Yellow for special words */
   }
   
   /* ==========================================================================
-     Social Icons Section
-     ========================================================================== */
-  .social-icons {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  /* ==========================================================================
-     Links Section
-     ========================================================================== */
-  .links {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  .link {
-    margin: 5px;
-  }
-  
-  /* ==========================================================================
-     Contact Section
-     ========================================================================== */
-  .contact {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  /* ==========================================================================
-     Link Text Styling (Plain clickable text with underline on hover)
+     Links - Underline on Hover
      ========================================================================== */
   .link-text {
     color: #33FF33;
     text-decoration: none;
-    transition: text-decoration 0.3s, color 0.3s;
-    font-size: 16px;
-    padding: 5px;
   }
   
   .link-text:hover {
     text-decoration: underline;
-    color: #33FF33;
   }
   
   /* ==========================================================================
      Responsive Adjustments
      ========================================================================== */
   @media (max-width: 600px) {
-    .window {
-      width: 95%;
-      padding: 5px;
-    }
-    .menu-bar li {
-      margin: 0 5px;
-      font-size: 14px;
-    }
-    .header {
-      font-size: 20px;
-    }
-    .social-icons,
-    .links,
-    .contact {
+    .terminal-content {
       font-size: 14px;
     }
   }
