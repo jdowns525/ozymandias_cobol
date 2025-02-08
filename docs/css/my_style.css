@@ -123,4 +123,29 @@
       font-size: 14px;
     }
   }
+/* ==========================================================================
+   Chatbot Input Style (Command Line)
+   ========================================================================== */
+   .input-area {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    color: #33FF33;
+  }
+  
+  .prompt {
+    color: #FFD700; /* Yellow prompt text */
+    margin-right: 5px;
+  }
+  
+  #user-input {
+    background: transparent;
+    border: none;
+    color: #33FF33;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+  }
   

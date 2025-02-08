@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>COBOL Chatbot</title>
+    <link rel="stylesheet" href="css/my_style.css" />
+  </head>
+  <body>
+    <div class="title-bar">
+      <span class="title-text">REVEDIT SYS2.CHATBOT</span>
+      <span class="title-right">COLUMNS 00001 00072</span>
+    </div>
+
+    <div class="command-bar">
+      CHATBOT READY. TYPE A COMMAND: <span class="blinking-cursor">_</span>
+    </div>
+
+    <div class="terminal-content" id="chat-log">
+      <pre>
+<span class="line-number">000001</span> <span class="keyword">SYSTEM ONLINE</span>
+<span class="line-number">000002</span> <span class="comment">WELCOME TO TARS CHATBOT. ASK ME ANYTHING.</span>
+      </pre>
+    </div>
+
+    <div class="input-area">
+      <span class="prompt">COMMAND ==></span> 
+      <input type="text" id="user-input" autofocus autocomplete="off" />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputField = document.getElementById("user-input");
+        const chatLog = document.getElementById("chat-log");
+        let conversationHistory = [];
+
+        async function fetchTarsResponse(userText) {
+          conversationHistory.push({ role: "user", content: userText });
+
+          const response = await fetch("http://localhost:3000/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: userText })
+          });
+
+          const data = await response.json();
+          const botReply = data.response.trim();
+
+          conversationHistory.push({ role: "assistant", content: botReply });
+          return botReply;
+        }
+
+        inputField.addEventListener("keypress", async function (event) {
+          if (event.key === "Enter") {
+            const userText = inputField.value.trim().toUpperCase();
+            if (userText === "") return;
+
+            chatLog.innerHTML += `<pre><span class="line-number">00000X</span> <span class="comment">USER:</span> ${userText}</pre>`;
+
+            const botResponse = await fetchTarsResponse(userText);
+            chatLog.innerHTML += `<pre><span class="line-number">00000X</span> <span class="green">TARS:</span> ${botResponse}</pre>`;
+
+            chatLog.scrollTop = chatLog.scrollHeight;
+            inputField.value = "";
+
+            if (userText === "EXIT") {
+              setTimeout(() => { window.location.href = "index.html"; }, 1000);
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
