@@ -23,71 +23,26 @@
     <div class="command-bar">
       <a href="chat.html" class="link-text">INITIATE CONVERSATION PROTOCOL</a> <span class="blinking-cursor">_</span>
     </div>
-<!-- Visitor Counter -->
-<div class="command-bar">
-  <span class="line-number">000999</span>
-  <span class="comment">//</span>
-  <span class="cyan">VISITOR COUNT:</span>
-  <span id="counter">0</span>
-</div>
 
-<script>
-  (function () {
-    var NS = 'ozymandias';
-    var KEY = 'visits';
-    var el = document.getElementById('counter');
+    <!-- Visitor Counter (all-time) -->
+    <div class="command-bar">
+      <span class="line-number">000001</span>
+      <span class="comment">//</span>
+      <span class="cyan">VISITOR COUNT:</span>
+      <span id="counter">0</span>
+    </div>
 
-    function set(v){ el.textContent = (typeof v === 'number') ? v : '—'; }
+    <script>
+      (function () {
+        var el = document.getElementById('counter');
+        function set(v){ el.textContent = (typeof v === 'number') ? v : '—'; }
 
-    function url(base, pathParts, params){
-      var u = new URL(base);
-      u.pathname = pathParts.map(encodeURIComponent).join('/');
-      if (params) Object.keys(params).forEach(k => u.searchParams.set(k, params[k]));
-      return u.toString();
-    }
-
-    var hitUrl = url('https://api.countapi.xyz/', ['hit', NS, KEY]);
-    var getUrl = url('https://api.countapi.xyz/', ['get', NS, KEY]);
-
-    console.log('[counter] HIT URL:', hitUrl);
-    console.log('[counter] GET URL:', getUrl);
-
-    function hit() {
-      return fetch(hitUrl, {cache:'no-store'}).then(r => {
-        if(!r.ok) throw new Error('HTTP ' + r.status);
-        return r.json();
-      }).then(j => set(j.value));
-    }
-
-    function getVal() {
-      return fetch(getUrl, {cache:'no-store'}).then(r => {
-        if(!r.ok) throw new Error('HTTP ' + r.status);
-        return r.json();
-      }).then(j => set(j.value));
-    }
-
-    // JSONP fallback if CORS/adblock interferes
-    function jsonpHit() {
-      return new Promise((resolve, reject) => {
-        var cb = 'counter_cb_' + Math.random().toString(36).slice(2);
-        window[cb] = data => { try { set(data && data.value || 0); resolve(); } finally { cleanup(); } };
-        function cleanup(){
-          delete window[cb];
-          if (s && s.parentNode) s.parentNode.removeChild(s);
-        }
-        var s = document.createElement('script');
-        s.src = hitUrl + (hitUrl.includes('?') ? '&' : '?') + 'callback=' + cb;
-        s.onerror = () => { cleanup(); reject(new Error('JSONP failed')); };
-        document.head.appendChild(s);
-      });
-    }
-
-    hit().catch(() => getVal()).catch(() => jsonpHit()).catch(err => {
-      console.error('Visitor counter failed:', err);
-      set('—');
-    });
-  })();
-</script>
+        fetch('/visits/hit', { cache: 'no-store' })
+          .then(r => { if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+          .then(j => set(j.value))
+          .catch(() => set('—'));
+      })();
+    </script>
 
     
     <!-- Terminal Content (Simulated COBOL Layout) -->

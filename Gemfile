@@ -15,6 +15,7 @@ gem 'sassc-rails'
 gem 'faker'
 gem 'mutex_m'
 gem 'csv'
+gem "redis", "~> 5.0"
 
 
 group :development do
