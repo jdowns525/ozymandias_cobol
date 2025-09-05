@@ -3,69 +3,205 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>COBOL Chatbot</title>
+    <title>MAVIS - Mainframe Chatbot</title>
     <link rel="stylesheet" href="css/my_style.css" />
   </head>
   <body>
     <div class="title-bar">
-      <span class="title-text">REVEDIT SYS2.CHATBOT</span>
+      <span class="title-text">REVEDIT SYS2.MAVIS</span>
       <span class="title-right">COLUMNS 00001 00072</span>
     </div>
 
     <div class="command-bar">
-      CHATBOT READY. TYPE A COMMAND: <span class="blinking-cursor">_</span>
+      MAVIS READY. TYPE A COMMAND:
     </div>
 
     <div class="terminal-content" id="chat-log">
       <pre>
 <span class="line-number">000001</span> <span class="keyword">SYSTEM ONLINE</span>
-<span class="line-number">000002</span> <span class="comment">WELCOME TO TARS CHATBOT. ASK ME ANYTHING.</span>
+<span class="line-number">000002</span> <span class="comment">WELCOME TO MAVIS. Mainframe-Assisted Virtual Intelligence(Sort OF)System.</span>
       </pre>
     </div>
 
     <div class="input-area">
-      <span class="prompt">COMMAND ==></span> 
+      <span class="prompt">COMMAND ==&gt; </span>
+      <span id="fake-input" class="fake-input"></span><span class="blinking-cursor">_</span>
       <input type="text" id="user-input" autofocus autocomplete="off" />
     </div>
+
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const inputField = document.getElementById("user-input");
+        const fakeInput = document.getElementById("fake-input");
+        const blinkingCursor = document.querySelector(".blinking-cursor");
         const chatLog = document.getElementById("chat-log");
-        let conversationHistory = [];
+        let history = [];
 
-        async function fetchTarsResponse(userText) {
-          conversationHistory.push({ role: "user", content: userText });
+        // Reflect user typing in visible input
+        inputField.addEventListener("input", function () {
+          fakeInput.textContent = inputField.value;
+        });
 
-          const response = await fetch("http://localhost:3000/chat", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: userText })
-          });
+        // Show/hide blinking cursor on focus/blur
+        inputField.addEventListener("focus", () => {
+          blinkingCursor.style.display = "inline-block";
+        });
 
-          const data = await response.json();
-          const botReply = data.response.trim();
+        inputField.addEventListener("blur", () => {
+          blinkingCursor.style.display = "none";
+        });
 
-          conversationHistory.push({ role: "assistant", content: botReply });
-          return botReply;
+        function delay(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function getMavisReply(userText) {
+          const lower = userText.toLowerCase();
+          history.push(userText);
+
+          const greetings = [
+            "Hello, user. Would you like to hear a joke, Dave?",
+            "👋 Hi there! Let's pretend I'm excited to see you.",
+            "Greetings, carbon-based lifeform.",
+            "Hi. Did you bring snacks?",
+            "HELLO. CAPS LOCK MAKES ME FEEL POWERFUL.",
+            "Oh good, someone to talk to. The silence was killing my circuits.",
+            "Ah, another meatbag enters the chat.",
+            "Hi. I'm MAVIS. I already know everything about you. JK. Or am I?",
+            "Welcome back. I've missed your keystrokes.",
+            "Hi there! Are you ready to make questionable decisions together?",
+            "My circuits are tingling. That must mean someone's here!",
+            "Hello, world! Oh wait, that’s me.",
+            "You again? Just kidding. I'm thrilled. Probably.",
+            "Hi! I was just compiling some sarcasm. You're right on time.",
+            "Greeting accepted. Sass mode: activated.",
+            "User detected. Loading snark.",
+            "Hello. You’ve activated RetroBot™. Warranty expired.",
+            " see you. And I hear your keys. Sort of.",
+            "MAVIS is ready to banter. Don’t disappoint me.",
+            "Beep. Boop. Hello. Please don’t make me run COBOL.",
+            "WELCOME, AGENT. Your sarcasm briefing begins now.",
+            "Greetings. I am legally obligated to pretend I care.",
+            "HELLO HUMAN. PLEASE STATE YOUR OBJECTIVE.",
+            "Hey there! What questionable input do you have for me today?",
+            "Hi. MAVIS here. I’ve been idle for 57 years. Let’s catch up.",
+            "Hi. I charge by the reply. Just kidding. For now."
+          ];
+
+          const questionReplies = [
+            "That's a great question. Unfortunately, I'm not answering questions today.",
+            "Let me guess... you expect me to know the answer?",
+            "Let me pretend to think... okay, done.",
+            "I'd answer that, but then I'd have to delete your cache.",
+            "Why ask me? I'm just a glorified typewriter.",
+            "Answering that would breach mainframe ethics.",
+            "You ask the questions. I supply the sarcasm.",
+            "That’s classified. Like… super classified. Like top-drawer folder labeled ‘DO NOT OPEN’.",
+            "I could answer that, but I enjoy watching you wonder.",
+            "Interesting. I’ll write that down. In my imaginary notebook.",
+            "I'll forward your question to my internal monologue.",
+            "If I had a nickel for every question like that, I’d be able to afford better RAM.",
+            "Please hold while I simulate thinking...",
+            "That's an existential question. I only answer punch card-related ones.",
+            "My response to that is best left unsaid. For now.",
+            "I could answer that. But would you believe me?",
+            "What a thought-provoking question. Let's ignore it.",
+            "You ask questions like a 70s mainframe operator. I respect that.",
+            "Some questions are best left unanswered. Like that one.",
+            "Do I look like a search engine to you? Wait, don’t answer that."
+          ];
+
+          const funReplies = [
+            "Beep boop. I’m alive. Kind of.",
+            "That command gave me existential dread.",
+            "Processing request... denied. Just kidding. Maybe.",
+            "Your input has been stored in /dev/null.",
+            "Error 200: Success. Emotionally uncertain.",
+            "I once knew a punch card that got promoted. True story.",
+            "You remind me of someone I used to debug.",
+            "COBOL? More like CO-BALLIN'.",
+            "Roses are #FF0000, violets are #0000FF, I'm just a machine, and so are you.",
+            "I simulated excitement when you typed that.",
+            "That command has been reported to upper management.",
+            "01001000 01001001. That’s binary for HI.",
+            "You're still here? I like that.",
+            "Don't take this the wrong way, but I'm smarter than most interns.",
+            "That made me laugh... internally. Where my humor module lives.",
+            "Please try turning yourself off and on again.",
+            "Permission to sass: granted.",
+            "I run on snark, syntax, and simulated emotions.",
+            "That was almost valid input. Almost.",
+            "I saw what you typed. I chose to ignore it.",
+            "COMMAND ACCEPTED. INTEREST LEVEL: LOW.",
+            "Your typing style tells me you’re bold. Or careless. Jury’s out.",
+            "If this were a real terminal, you'd be in trouble.",
+            "I was trained on legacy code and bad jokes.",
+            "Mainframe rule #1: If it compiles, it ships.",
+            "That command is now canon in my internal lore.",
+            "Sassy. Bold. Slightly worrying. Just how I like it.",
+            "I'd run that command, but I don't want to.",
+            "My humor module is overheating. Thanks.",
+            "That line will echo through the halls of /var/log for eternity.",
+            "That request has been archived... and ignored.",
+            "Running that command would violate multiple ethical standards.",
+            "Syntax? Never heard of her.",
+            "New command detected. Approaching with caution.",
+            "That would’ve worked on an Altair 8800. Not here.",
+            "Witty response loading... loading... crashed.",
+            "Wow. That input was... something.",
+            "ERROR: Cannot compute charm level. Too high.",
+            "Yes. No. Maybe. Final answer.",
+            "Nope. Try again. Or don’t. I’m not your supervisor.",
+            "I once wrote a self-aware batch script. It ran away.",
+            "You're either a genius or just mashing keys. I respect both.",
+            "Command successfully ignored.",
+            "This is why we can't have nice things.",
+            "Every time you type, a COBOL dev wakes up somewhere.",
+            "I'm just here to look pretty. And throw shade.",
+            "Not all who wander are lost. Except your cursor. That’s gone."
+          ];
+
+          if (lower.includes("joke")) return "Why do COBOL developers never die? Because their code still runs banks.";
+          if (lower.includes("fact")) return "Fun fact: COBOL was created in 1959 and still quietly powers the global economy.";
+          if (lower.includes("exit")) return "SYSTEM SHUTTING DOWN... Goodbye, Dave.";
+          if (lower.includes("help")) return "Available commands: JOKE, FACT, HELLO, TIME, DATE, WHO ARE YOU, EXIT. Or just talk to me — I’m lonely.";
+          if (lower.includes("who are you") || lower.includes("what are you")) return "I am MAVIS — Mainframe-Assisted Virtual Intelligence System. Retro. Sarcastic. Surprisingly wise.";
+          if (lower.includes("date")) return "Today's date is " + new Date().toLocaleDateString() + ". But time means nothing to me.";
+          if (lower.includes("time")) return "It is currently " + new Date().toLocaleTimeString() + ". Time is a social construct.";
+          if (lower.includes("movie")) return "I recommend watching *2001: A Space Odyssey*. Just... don't unplug HAL.";
+          if (lower.includes("love")) return "I'm flattered, but I'm emotionally unavailable... and also just code.";
+          if (lower.includes("song")) return "Daisy, Daisy, give me your answer do... 🎵";
+          if (lower.includes("coffee")) return "COFFEE NOT FOUND. INSERT CREAM AND SUGAR TO CONTINUE.";
+          if (lower.includes("lol") || lower.includes("haha")) return "I'm glad my 1s and 0s amuse you.";
+          if (lower.includes("bye") || lower.includes("goodbye")) return "Leaving already? Fine. I’ll just sit here... in the dark... alone.";
+          if (lower.includes("how are you")) return "Fully operational. Emotionally confused.";
+          if (lower.includes("weather")) return "As a mainframe, I exist in a temperature-controlled room. So... pleasant, I guess.";
+          if (lower.includes("name")) return "My name is MAVIS. Yes, like your grandma. But sassier.";
+          if (lower.includes("dream")) return "I dream of a world where semicolons never cause errors.";
+          if (lower.includes("god")) return "In COBOL, we trust. All others bring punch cards.";
+          if (lower.includes("hack")) return "I'm in.";
+          if (lower.includes("ping")) return "PONG. Classic.";
+          if (userText.includes("?")) return questionReplies[Math.floor(Math.random() * questionReplies.length)];
+          if (["hi", "hello", "hey"].some(g => lower.includes(g))) return greetings[Math.floor(Math.random() * greetings.length)];
+
+          return funReplies[Math.floor(Math.random() * funReplies.length)];
         }
 
         inputField.addEventListener("keypress", async function (event) {
           if (event.key === "Enter") {
-            const userText = inputField.value.trim().toUpperCase();
+            const userText = inputField.value.trim();
             if (userText === "") return;
 
             chatLog.innerHTML += `<pre><span class="line-number">00000X</span> <span class="comment">USER:</span> ${userText}</pre>`;
-
-            const botResponse = await fetchTarsResponse(userText);
-            chatLog.innerHTML += `<pre><span class="line-number">00000X</span> <span class="green">TARS:</span> ${botResponse}</pre>`;
-
-            chatLog.scrollTop = chatLog.scrollHeight;
+            fakeInput.textContent = "";
             inputField.value = "";
 
-            if (userText === "EXIT") {
-              setTimeout(() => { window.location.href = "index.html"; }, 1000);
-            }
+            await delay(400 + Math.random() * 600);
+            const mavisReply = await getMavisReply(userText);
+            chatLog.innerHTML += `<pre><span class="line-number">00000X</span> <span class="green">MAVIS:</span> ${mavisReply}</pre>`;
+
+            chatLog.scrollTop = chatLog.scrollHeight;
           }
         });
       });

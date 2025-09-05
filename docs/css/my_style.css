@@ -1,151 +1,161 @@
 /* ==========================================================================
    Global Styles - COBOL Terminal Look
    ========================================================================== */
-   body {
-    background-color: #000; 
-    color: #33FF33; 
-    font-family: "Courier New", Courier, monospace; 
-    font-size: 16px; 
-    line-height: 1.5;
-    padding: 10px;
-    text-transform: uppercase; 
-  }
-  
-  /* ==========================================================================
-     Fake Title Bar (like the COBOL environment title in the image)
-     ========================================================================== */
-  .title-bar {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 15px;
-    background-color: #000;
-    color: #FFF;
-    font-weight: bold;
-    border-bottom: 2px solid #33FF33;
-  }
-  
-  .title-text {
-    color:#33FF33;
-  }
-  
-  .title-right {
-    color: #33FF33;
-  }
-  
-  /* ==========================================================================
-     Command Line Style
-     ========================================================================== */
-  .command-bar {
-    padding: 5px 15px;
-    color: #33FF33;
-    font-weight: bold;
-  }
-  
-  /* Blinking Cursor */
-  .blinking-cursor {
-    color: #33FF33;
-    animation: blink 1s infinite;
-  }
-  
-  @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  /* ==========================================================================
-     Terminal Content Styles
-     ========================================================================== */
-  .terminal-content {
-    white-space: pre-wrap;
-    font-size: 16px;
-    padding: 10px;
-  }
-  
-  /* Line Numbers */
-  .line-number {
-    color: #00FF00; /* Green */
-    display: inline-block;
-    width: 6ch; /* Fixed width for alignment */
-  }
-  
-  /* Syntax Colors */
-  .keyword {
-    color: #33FF33; 
-    font-weight: bold;
-  }
-  
-  .comment {
-    color: #00FF00; 
-  }
-  
-  .header {
-    color: #33FF33; 
-  }
-  
-  .error {
-    color: #33FF33; 
-  }
-  
-  .white {
-    color: #33FF33; 
-  }
-  
-  .green {
-    color: #33FF33; 
-  }
-  
-  .cyan {
-    color: #33FF33; 
-  }
-  
-  .yellow {
-    color: #33FF33; 
-  }
-  
-  /* ==========================================================================
-     Links - Underline on Hover
-     ========================================================================== */
-  .link-text {
-    color: #33FF33;
-    text-decoration: none;
-  }
-  
-  .link-text:hover {
-    text-decoration: underline;
-  }
-  
-  /* ==========================================================================
-     Responsive Adjustments
-     ========================================================================== */
-  @media (max-width: 600px) {
-    .terminal-content {
-      font-size: 14px;
-    }
-  }
+body {
+  background-color: #000;
+  color: #33FF33;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
 /* ==========================================================================
-   Chatbot Input Style (Command Line)
+   Fake Title Bar
    ========================================================================== */
-   .input-area {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    font-size: 16px;
-    color: #33FF33;
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  background-color: #000;
+  color: #FFF;
+  font-weight: bold;
+  border-bottom: 2px solid #33FF33;
+}
+
+.title-text,
+.title-right {
+  color: #33FF33;
+}
+
+/* ==========================================================================
+   Command Bar
+   ========================================================================== */
+.command-bar {
+  padding: 5px 15px;
+  color: #33FF33;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Terminal Content
+   ========================================================================== */
+.terminal-content {
+  white-space: pre-wrap;
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* ==========================================================================
+   Line Numbers & Syntax Colors
+   ========================================================================== */
+.line-number {
+  color: #00FF00;
+  display: inline-block;
+  width: 6ch;
+}
+
+.keyword,
+.header,
+.error,
+.white,
+.green,
+.cyan,
+.yellow {
+  color: #33FF33;
+  font-weight: bold;
+}
+
+.comment {
+  color: #00FF00;
+}
+
+/* ==========================================================================
+   Input Area (Command Line Style)
+   ========================================================================== */
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  color: #33FF33;
+}
+
+.prompt {
+  color: #FFD700; /* Yellow prompt text */
+  margin-right: 5px;
+}
+
+/* ==========================================================================
+   Enhanced Input with Cursor Tracking
+   ========================================================================== */
+.input-wrapper {
+  position: relative;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  white-space: pre;
+  overflow: hidden;
+  display: inline-block;
+  color: #33FF33;
+  min-height: 1em;
+}
+
+#fake-input {
+  display: inline;
+  white-space: pre;
+}
+
+#user-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ==========================================================================
+   Blinking Cursor
+   ========================================================================== */
+.blinking-cursor {
+  display: inline-block;
+  width: 1ch;
+  color: #33FF33;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
   }
-  
-  .prompt {
-    color: #FFD700; /* Yellow prompt text */
-    margin-right: 5px;
+  50% {
+    opacity: 0;
   }
-  
-  #user-input {
-    background: transparent;
-    border: none;
-    color: #33FF33;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 16px;
-    outline: none;
-    width: 100%;
+  100% {
+    opacity: 1;
   }
-  
+}
+
+/* ==========================================================================
+   Link Styling
+   ========================================================================== */
+.link-text {
+  color: #33FF33;
+  text-decoration: none;
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 600px) {
+  .terminal-content {
+    font-size: 14px;
+  }
+}
