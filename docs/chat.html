@@ -13,12 +13,15 @@
     </div>
 
     <div class="command-bar">
-      MAVIS READY. TYPE A COMMAND:
+      MAVIS BOOT COMPLETE. AWAITING USER INSTRUCTION
+    </div>
+    <div class="command-bar">
+      SYSTEM STATUS: ONLINE. YOU MAY INTERFACE NOW.
     </div>
 
     <div class="terminal-content" id="chat-log">
       <pre>
-<span class="line-number">000001</span> <span class="keyword">SYSTEM ONLINE</span>
+<span class="line-number">000001</span> <span class="keyword">CONNECTION STABLE</span>
 <span class="line-number">000002</span> <span class="comment">WELCOME TO M.A.V.I.S.</span>
 <span class="line-number">000003</span> <span class="comment">Mainframe-Assisted Virtual Intelligence System.</span>
 <span class="line-number">000003</span> <span class="comment">sort of...</span>
@@ -201,10 +204,16 @@
 
             await delay(400 + Math.random() * 600);
             const mavisReply = await getMavisReply(userText);
+            chatLog.innerHTML = ""; // This clears the previous messages
+
+            chatLog.innerHTML = `<pre><span class="line-number">00000X</span> <span class="comment">USER:</span> ${userText}</pre>`;
+
+            await delay(300 + Math.random() * 600);
+
             chatLog.innerHTML += `<pre><span class="line-number">00000X</span> <span class="green">MAVIS:</span> ${mavisReply}</pre>`;
 
             chatLog.scrollTop = chatLog.scrollHeight;
-          }
+                      }
         });
         document.querySelector(".input-area").addEventListener("click", function () {
           inputField.focus();
