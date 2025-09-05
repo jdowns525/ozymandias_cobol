@@ -18,11 +18,24 @@
       <a href="https://www.poetryfoundation.org/poems/46565/ozymandias" target="_blank" class="link-text">ORIGIN</a>
     </div>
     <div class="command-bar">
-      <a href="https://jdowns525.github.io/ozymandiasportfolio.github.io/"_blank" class="link-text">PHOTO ARCHIVE</a>
+      <a href="https://jdowns525.github.io/ozymandiasportfolio.github.io/" target="_blank" class="link-text">PHOTO ARCHIVE</a>
     </div>
     <div class="command-bar">
       <a href="chat.html" class="link-text">INITIATE CONVERSATION PROTOCOL</a> <span class="blinking-cursor">_</span>
     </div>
+    <!-- Visitor Counter -->
+    <div class="command-bar">
+      <span class="link-text">VISITOR COUNT: <span id="counter">0</span></span>
+    </div>
+
+    <script>
+      // Simple CountAPI counter
+      fetch('https://api.countapi.xyz/hit/ozymandias/visits')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('counter').innerText = data.value;
+        });
+    </script>
     
     <!-- Terminal Content (Simulated COBOL Layout) -->
     <div class="terminal-content">

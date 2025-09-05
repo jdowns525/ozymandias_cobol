@@ -162,3 +162,11 @@ body {
     font-size: 14px;
   }
 }
+
+#counter { font-family: monospace; }
+.command-bar { display: block; font-family: monospace; }
+.line-number { color: #8a8a8a; margin-right: .5rem; }
+.comment { color: #8a8a8a; margin: 0 .5rem; }
+.cyan { color: #00ffff; }
+
+
