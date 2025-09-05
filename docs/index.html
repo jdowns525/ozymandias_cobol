@@ -33,70 +33,62 @@
 
 <script>
   (function () {
-    var NAMESPACE = 'ozymandias';   // make this unique to your site/domain
-    var KEY = 'visits';             // all-time counter key
+    var NS = 'ozymandias';
+    var KEY = 'visits';
     var el = document.getElementById('counter');
 
-    function set(n) { el.textContent = (typeof n === 'number') ? n : '—'; }
+    function set(v){ el.textContent = (typeof v === 'number') ? v : '—'; }
 
-    // --- Primary: standard fetch (increments + returns value) ---
+    function url(base, pathParts, params){
+      var u = new URL(base);
+      u.pathname = pathParts.map(encodeURIComponent).join('/');
+      if (params) Object.keys(params).forEach(k => u.searchParams.set(k, params[k]));
+      return u.toString();
+    }
+
+    var hitUrl = url('https://api.countapi.xyz/', ['hit', NS, KEY]);
+    var getUrl = url('https://api.countapi.xyz/', ['get', NS, KEY]);
+
+    console.log('[counter] HIT URL:', hitUrl);
+    console.log('[counter] GET URL:', getUrl);
+
     function hit() {
-      return fetch('https://api.countapi.xyz/hit/' +
-                   encodeURIComponent(NAMESPACE) + '/' + encodeURIComponent(KEY),
-                   { method: 'GET', cache: 'no-store' })
-        .then(function (r) {
-          if (!r.ok) throw new Error('HTTP ' + r.status);
-          return r.json();
-        })
-        .then(function (data) {
-          if (data && typeof data.value !== 'undefined') set(data.value);
-          else throw new Error('No value in response');
-        });
+      return fetch(hitUrl, {cache:'no-store'}).then(r => {
+        if(!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      }).then(j => set(j.value));
     }
 
-    // --- Fallback #1: GET current value (in case /hit is blocked but /get works) ---
-    function getValue() {
-      return fetch('https://api.countapi.xyz/get/' +
-                   encodeURIComponent(NAMESPACE) + '/' + encodeURIComponent(KEY),
-                   { method: 'GET', cache: 'no-store' })
-        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-        .then(function (data) { set(data && data.value || 0); });
+    function getVal() {
+      return fetch(getUrl, {cache:'no-store'}).then(r => {
+        if(!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      }).then(j => set(j.value));
     }
 
-    // --- Fallback #2: JSONP (bypasses CORS/adblock patterns in some setups) ---
+    // JSONP fallback if CORS/adblock interferes
     function jsonpHit() {
-      return new Promise(function (resolve, reject) {
-        var cbName = 'updateCount_' + Math.random().toString(36).slice(2);
-        window[cbName] = function (data) {
-          try { set(data && data.value || 0); resolve(); }
-          finally {
-            delete window[cbName];
-            if (script && script.parentNode) script.parentNode.removeChild(script);
-          }
-        };
-        var script = document.createElement('script');
-        script.src = 'https://api.countapi.xyz/hit/' +
-                     encodeURIComponent(NAMESPACE) + '/' + encodeURIComponent(KEY) +
-                     '?callback=' + cbName;
-        script.onerror = function () {
-          delete window[cbName];
-          if (script && script.parentNode) script.parentNode.removeChild(script);
-          reject(new Error('JSONP load failed'));
-        };
-        document.head.appendChild(script);
+      return new Promise((resolve, reject) => {
+        var cb = 'counter_cb_' + Math.random().toString(36).slice(2);
+        window[cb] = data => { try { set(data && data.value || 0); resolve(); } finally { cleanup(); } };
+        function cleanup(){
+          delete window[cb];
+          if (s && s.parentNode) s.parentNode.removeChild(s);
+        }
+        var s = document.createElement('script');
+        s.src = hitUrl + (hitUrl.includes('?') ? '&' : '?') + 'callback=' + cb;
+        s.onerror = () => { cleanup(); reject(new Error('JSONP failed')); };
+        document.head.appendChild(s);
       });
     }
 
-    // Try fetch /hit → then /get → then JSONP
-    hit()
-      .catch(function () { return getValue(); })
-      .catch(function () { return jsonpHit(); })
-      .catch(function (err) {
-        console.error('Visitor counter failed:', err);
-        set('—');
-      });
+    hit().catch(() => getVal()).catch(() => jsonpHit()).catch(err => {
+      console.error('Visitor counter failed:', err);
+      set('—');
+    });
   })();
 </script>
+
     
     <!-- Terminal Content (Simulated COBOL Layout) -->
     <div class="terminal-content">
