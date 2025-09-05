@@ -24,23 +24,56 @@
       <a href="chat.html" class="link-text">INITIATE CONVERSATION PROTOCOL</a> <span class="blinking-cursor">_</span>
     </div>
 
-    <!-- Visitor Counter (all-time) -->
+    <!-- Visitor Counter (static-friendly, no JS) -->
     <div class="command-bar">
       <span class="line-number">000001</span>
       <span class="comment">//</span>
       <span class="cyan">VISITOR COUNT:</span>
-      <span id="counter">0</span>
+      <img
+        src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fozymandias.fyi%2F&count_bg=%2333FF33&title_bg=%23000000&icon=&icon_color=%23FFFFFF&title=&edge_flat=true"
+        alt="visitor count"
+        style="vertical-align: middle; height: 18px"
+      />
     </div>
 
     <script>
       (function () {
         var el = document.getElementById('counter');
+
+        
+        var NS  = 'ozymandias.fyi';  
+        var KEY = 'all';
+
+        // 1) Try standard fetch()
+        var hitUrl = 'https://api.countapi.xyz/hit/' + encodeURIComponent(NS) + '/' + encodeURIComponent(KEY);
+
         function set(v){ el.textContent = (typeof v === 'number') ? v : '—'; }
 
-        fetch('/visits/hit', { cache: 'no-store' })
-          .then(r => { if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-          .then(j => set(j.value))
-          .catch(() => set('—'));
+        function fetchHit() {
+          return fetch(hitUrl, { cache: 'no-store' })
+            .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+            .then(function(j){ set(j.value); });
+        }
+
+        // 2) Fallback: JSONP (bypasses some blockers on static hosts)
+        function jsonpHit() {
+          return new Promise(function (resolve, reject) {
+            var cb = 'counter_cb_' + Math.random().toString(36).slice(2);
+            window[cb] = function (data) {
+              try { set(data && data.value || 0); resolve(); }
+              finally {
+                delete window[cb];
+                if (s && s.parentNode) s.parentNode.removeChild(s);
+              }
+            };
+            var s = document.createElement('script');
+            s.src = hitUrl + (hitUrl.indexOf('?') > -1 ? '&' : '?') + 'callback=' + cb;
+            s.onerror = function(){ reject(new Error('JSONP failed')); };
+            document.head.appendChild(s);
+          });
+        }
+
+        fetchHit().catch(jsonpHit).catch(function(){ set('—'); });
       })();
     </script>
 
