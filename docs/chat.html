@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="title-bar">
-      <span class="title-text">REVEDIT SYS2.MAVIS</span>
+      <span class="title-text">REVEDIT SYS2.M.A.V.I.S.</span>
       <span class="title-right">COLUMNS 00001 00072</span>
     </div>
 
@@ -19,12 +19,14 @@
     <div class="terminal-content" id="chat-log">
       <pre>
 <span class="line-number">000001</span> <span class="keyword">SYSTEM ONLINE</span>
-<span class="line-number">000002</span> <span class="comment">WELCOME TO MAVIS. Mainframe-Assisted Virtual Intelligence(Sort OF)System.</span>
+<span class="line-number">000002</span> <span class="comment">WELCOME TO M.A.V.I.S.</span>
+<span class="line-number">000003</span> <span class="comment">Mainframe-Assisted Virtual IntelligenceSystem.</span>
+<span class="line-number">000003</span> <span class="comment">sort of...</span>
       </pre>
     </div>
 
     <div class="input-area">
-      <span class="prompt">COMMAND ==&gt; </span>
+      <span class="prompt">Feeling lucky? type COMMAND ==&gt; </span>
       <span id="fake-input" class="fake-input"></span><span class="blinking-cursor">_</span>
       <input type="text" id="user-input" autofocus autocomplete="off" />
     </div>
@@ -203,6 +205,9 @@
 
             chatLog.scrollTop = chatLog.scrollHeight;
           }
+        });
+        document.querySelector(".input-area").addEventListener("click", function () {
+          inputField.focus();
         });
       });
     </script>
