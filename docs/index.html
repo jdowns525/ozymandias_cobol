@@ -17,10 +17,8 @@
   <body>
     <main class="terminal">
       <div class="status">
-        <span class="panel">@MAIN</span>
-        <span class="binary" title="01001010 01101111 01110011 01100101 01110000 01101000"
-          >01001010 01101111 01110011 01100101 01110000 01101000</span
-        >
+        <span class="panel">OZY@MAIN</span>
+        <span class="binary">01001010 01101111 01110011 01100101 01110000 01101000</span>
         <span class="clock" id="clock">--:--:--</span>
       </div>
       <div class="rule" aria-hidden="true">
@@ -29,8 +27,8 @@
 
       <h1 class="masthead">OZYMANDIAS ARCHIVE SYSTEM</h1>
       <p class="strapline">
-        Photographs, zines, code, and a few noises. Pick a number below, or type
-        one and press enter.
+        Photographs, zines, code, and a few noises. Pick a number below — or say
+        anything else and MAVIS will answer.
       </p>
 
       <form class="command" id="command" autocomplete="off">
@@ -39,258 +37,122 @@
           id="option"
           name="option"
           type="text"
-          maxlength="12"
-          placeholder="number or name"
+          maxlength="120"
+          placeholder="number, name, or a question"
           aria-describedby="message"
         />
         <span class="cursor" aria-hidden="true">█</span>
       </form>
 
       <p class="message" id="message" role="status">
-        Ready. Enter <b>0</b> to start a conversation.
+        Ready. Enter <b>0</b> for the full chat screen.
       </p>
 
-      <section class="group">
-        <h2>Talk</h2>
-        <ol>
-          <li>
-            <a class="opt" href="chat.html" data-key="0" data-alias="chat talk">
-              <span class="key">0</span>
-              <span class="name">CHAT</span>
-              <span class="note">conversation protocol</span>
-            </a>
-          </li>
-          <li>
-            <a
-              class="opt"
-              href="mailto:downsjosseph@gmail.com"
-              data-key="1"
-              data-alias="email mail"
-            >
-              <span class="key">1</span>
-              <span class="name">EMAIL</span>
-              <span class="note">downsjosseph@gmail.com</span>
-            </a>
-          </li>
-        </ol>
-      </section>
+      <div class="transcript" id="transcript" aria-live="polite"></div>
 
-      <section class="group">
-        <h2>Work</h2>
-        <ol>
-          <li>
-            <a
-              class="opt"
-              href="https://jdowns525.github.io/ozymandiasportfolio.github.io/"
-              target="_blank"
-              rel="noopener"
-              data-key="2"
-              data-alias="photos photo archive portfolio"
-            >
-              <span class="key">2</span>
-              <span class="name">PHOTOS</span>
-              <span class="note">the picture archive</span>
-            </a>
-          </li>
-          <li>
-            <a
-              class="opt"
-              href="https://downsjo.gumroad.com/l/xurrol?_gl=1"
-              target="_blank"
-              rel="noopener"
-              data-key="3"
-              data-alias="zine1 zine 1"
-            >
-              <span class="key">3</span>
-              <span class="name">ZINE ONE</span>
-              <span class="note">print, on gumroad</span>
-            </a>
-          </li>
-          <li>
-            <a
-              class="opt"
-              href="https://downsjo.gumroad.com/l/xjsjw?_gl=1"
-              target="_blank"
-              rel="noopener"
-              data-key="4"
-              data-alias="zine2 zine 2"
-            >
-              <span class="key">4</span>
-              <span class="name">ZINE TWO</span>
-              <span class="note">print, on gumroad</span>
-            </a>
-          </li>
-          <li>
-            <a
-              class="opt"
-              href="https://medium.com/@downsjosseph"
-              target="_blank"
-              rel="noopener"
-              data-key="5"
-              data-alias="blog writing medium"
-            >
-              <span class="key">5</span>
-              <span class="name">BLOG</span>
-              <span class="note">writing, on medium</span>
-            </a>
-          </li>
-        </ol>
-      </section>
-
-      <section class="group">
-        <h2>Files</h2>
-        <ol>
-          <li>
-            <a
-              class="opt"
-              href="https://github.com/jdowns525/fujifilm_simulations"
-              target="_blank"
-              rel="noopener"
-              data-key="6"
-              data-alias="fuji recipes sims"
-            >
-              <span class="key">6</span>
-              <span class="name">FUJI SIMS</span>
-              <span class="note">film recipes, repo</span>
-            </a>
-          </li>
-          <li>
-            <a
-              class="opt"
-              href="https://drive.google.com/file/d/1tuN7BKaBPHiA78ve-pesFua62NLJkPsE/view?usp=drive_link"
-              target="_blank"
-              rel="noopener"
-              data-key="7"
-              data-alias="template zine template pages"
-            >
-              <span class="key">7</span>
-              <span class="name">ZINE TEMPLATE</span>
-              <span class="note">pages .template, free</span>
-            </a>
-          </li>
-          <li>
-            <a
-              class="opt"
-              href="https://github.com/jdowns525/neetcode_75_answers"
-              target="_blank"
-              rel="noopener"
-              data-key="8"
-              data-alias="neetcode leetcode 75"
-            >
-              <span class="key">8</span>
-              <span class="name">NEETCODE 75</span>
-              <span class="note">worked answers, repo</span>
-            </a>
-          </li>
-          <li>
-            <a
-              class="opt"
-              href="https://www.poetryfoundation.org/poems/46565/ozymandias"
-              target="_blank"
-              rel="noopener"
-              data-key="9"
-              data-alias="origin poem shelley ozymandias"
-            >
-              <span class="key">9</span>
-              <span class="name">ORIGIN</span>
-              <span class="note">Shelley, 1818 — the name</span>
-            </a>
-          </li>
-        </ol>
-      </section>
-
-      <section class="group">
-        <h2>Elsewhere</h2>
-        <ol>
-          <li>
-            <a
-              class="opt"
-              href="https://www.instagram.com/0zymanndias"
-              target="_blank"
-              rel="noopener"
-              data-key="10"
-              data-alias="instagram ig insta"
-            >
-              <span class="key">10</span>
-              <span class="name">INSTAGRAM</span>
-              <span class="note">@0zymanndias</span>
-            </a>
-          </li>
-          <li>
-            <a
-              class="opt"
-              href="https://m.soundcloud.com/0zymanndias"
-              target="_blank"
-              rel="noopener"
-              data-key="11"
-              data-alias="soundcloud music sc"
-            >
-              <span class="key">11</span>
-              <span class="name">SOUNDCLOUD</span>
-              <span class="note">noises</span>
-            </a>
-          </li>
-          <li>
-            <a
-              class="opt"
-              href="https://strava.app.link/RF4qezfm0Wb"
-              target="_blank"
-              rel="noopener"
-              data-key="12"
-              data-alias="strava rides cycling bike"
-            >
-              <span class="key">12</span>
-              <span class="name">STRAVA</span>
-              <span class="note">rides</span>
-            </a>
-          </li>
-          <li>
-            <a
-              class="opt"
-              href="https://www.tiktok.com/@0zymanndias?_t=ZP-904tGFoKYYw&amp;_r=1"
-              target="_blank"
-              rel="noopener"
-              data-key="13"
-              data-alias="tiktok video"
-            >
-              <span class="key">13</span>
-              <span class="name">TIKTOK</span>
-              <span class="note">@0zymanndias</span>
-            </a>
-          </li>
-        </ol>
-      </section>
+      <div id="menu"></div>
 
       <div class="rule" aria-hidden="true">
         ────────────────────────────────────────────────────────────────────────
       </div>
       <p class="keys">
-        <span><b>ENTER</b> select</span>
-        <span><b>TAB</b> next</span>
+        <span><b>ENTER</b> select or send</span>
+        <span><b>↑ ↓</b> history</span>
         <span><b>ESC</b> clear</span>
       </p>
     </main>
 
+    <script src="js/banks.js"></script>
+    <script src="js/system.js"></script>
     <script>
       (function () {
         var form = document.getElementById("command");
         var input = document.getElementById("option");
         var message = document.getElementById("message");
-        var clock = document.getElementById("clock");
-        var options = Array.prototype.slice.call(
-          document.querySelectorAll(".opt")
-        );
+        var transcript = document.getElementById("transcript");
+        var menu = document.getElementById("menu");
 
-        function tick() {
-          var d = new Date();
-          clock.textContent = [d.getHours(), d.getMinutes(), d.getSeconds()]
-            .map(function (n) {
-              return String(n).padStart(2, "0");
-            })
-            .join(":");
+        OZY.startClock(document.getElementById("clock"));
+
+        /* ---- build the menu from the shared option list ---------------- */
+
+        OZY.GROUPS.forEach(function (group) {
+          var section = document.createElement("section");
+          section.className = "group";
+
+          var heading = document.createElement("h2");
+          heading.textContent = group.title;
+          section.appendChild(heading);
+
+          var list = document.createElement("ol");
+          group.keys.forEach(function (key) {
+            var opt = OZY.MENU.filter(function (o) {
+              return o.key === key;
+            })[0];
+            if (!opt) return;
+
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.className = "opt";
+            a.href = opt.url;
+            a.dataset.key = opt.key;
+            if (opt.external) {
+              a.target = "_blank";
+              a.rel = "noopener";
+            }
+            a.innerHTML =
+              '<span class="key"></span><span class="name"></span><span class="note"></span>';
+            a.querySelector(".key").textContent = opt.key;
+            a.querySelector(".name").textContent = opt.name;
+            a.querySelector(".note").textContent = opt.note;
+            li.appendChild(a);
+            list.appendChild(li);
+          });
+
+          section.appendChild(list);
+          menu.appendChild(section);
+        });
+
+        var rows = Array.prototype.slice.call(document.querySelectorAll(".opt"));
+
+        function armRow(opt) {
+          rows.forEach(function (row) {
+            row.classList.toggle("is-armed", !!opt && row.dataset.key === opt.key);
+          });
         }
-        tick();
-        setInterval(tick, 1000);
+
+        /* ---- replay whatever was said this session --------------------- */
+
+        // Only the most recent exchange stays on the menu screen — one line
+        // from you, one from MAVIS. The full conversation lives in chat.html.
+        var TAIL = 2;
+
+        function drawTranscript() {
+          var entries = OZY.log.all();
+          transcript.innerHTML = "";
+          var start = Math.max(0, entries.length - TAIL);
+          if (start > 0) {
+            var elided = document.createElement("div");
+            elided.className = "line line--sys";
+            elided.innerHTML =
+              '<span class="num">······</span><span class="body"></span>';
+            elided.querySelector(".body").textContent =
+              start +
+              " earlier line" +
+              (start === 1 ? "" : "s") +
+              " hidden — type 0 for the full conversation";
+            transcript.appendChild(elided);
+          }
+          entries.slice(start).forEach(function (entry, i) {
+            OZY.renderLine(transcript, entry, start + i + 1);
+          });
+        }
+        drawTranscript();
+
+        /* ---- input history ---------------------------------------------- */
+
+        var typed = [];
+        var cursorIndex = 0;
 
         function say(text, state) {
           message.textContent = text;
@@ -301,57 +163,78 @@
           }
         }
 
-        function find(query) {
-          var q = query.trim().toLowerCase();
-          if (!q) return null;
-          for (var i = 0; i < options.length; i++) {
-            var el = options[i];
-            if (el.dataset.key === q) return el;
-            var name = el.querySelector(".name").textContent.toLowerCase();
-            if (name === q) return el;
-            var aliases = (el.dataset.alias || "").split(" ");
-            if (aliases.indexOf(q) > -1) return el;
-            if (name.indexOf(q) === 0 && q.length > 2) return el;
-          }
-          return null;
-        }
+        /* ---- the one command line ---------------------------------------- */
 
         form.addEventListener("submit", function (event) {
           event.preventDefault();
-          var target = find(input.value);
-          if (!target) {
-            say("No option matches that. Try a number from 0 to 13.", "error");
+          var text = input.value.trim();
+          if (!text) return;
+
+          typed.push(text);
+          cursorIndex = typed.length;
+          input.value = "";
+
+          var lower = text.toLowerCase();
+
+          if (lower === "clear" || lower === "cls") {
+            OZY.log.clear();
+            drawTranscript();
+            say("Screen cleared.");
             return;
           }
-          target.classList.add("is-armed");
-          say("Opening " + target.querySelector(".name").textContent + "…");
-          window.setTimeout(function () {
-            target.click();
-            target.classList.remove("is-armed");
-            input.value = "";
-          }, 180);
+
+          var opt = OZY.match(text);
+          if (opt) {
+            armRow(opt);
+            say("Opening " + opt.name + "…");
+            setTimeout(function () {
+              OZY.open(opt);
+              armRow(null);
+            }, 180);
+            return;
+          }
+
+          // Not an option — hand it to MAVIS, and remember it for the chat page.
+          armRow(null);
+          OZY.log.push("USER", text);
+          drawTranscript();
+          say("MAVIS is thinking…");
+
+          setTimeout(function () {
+            OZY.log.push("MAVIS", OZY.reply(text));
+            drawTranscript();
+            say("Type 0 to carry this into the full chat screen.");
+          }, 350 + Math.random() * 500);
         });
 
         input.addEventListener("input", function () {
-          var target = find(input.value);
-          options.forEach(function (el) {
-            el.classList.toggle("is-armed", el === target);
-          });
-          if (target) {
-            say("Enter to open " + target.querySelector(".name").textContent + ".");
+          var opt = OZY.match(input.value);
+          armRow(opt);
+          if (opt) {
+            say("Enter to open " + opt.name + ".");
           } else if (input.value.trim()) {
-            say("No match yet.", "error");
+            say("Enter to ask MAVIS.");
           } else {
             say("Ready.");
+          }
+        });
+
+        input.addEventListener("keydown", function (event) {
+          if (event.key === "ArrowUp" && typed.length) {
+            event.preventDefault();
+            cursorIndex = Math.max(0, cursorIndex - 1);
+            input.value = typed[cursorIndex];
+          } else if (event.key === "ArrowDown" && typed.length) {
+            event.preventDefault();
+            cursorIndex = Math.min(typed.length, cursorIndex + 1);
+            input.value = typed[cursorIndex] || "";
           }
         });
 
         document.addEventListener("keydown", function (event) {
           if (event.key === "Escape") {
             input.value = "";
-            options.forEach(function (el) {
-              el.classList.remove("is-armed");
-            });
+            armRow(null);
             say("Ready.");
             input.focus();
             return;
@@ -365,6 +248,8 @@
             input.focus();
           }
         });
+
+        input.focus();
       })();
     </script>
   </body>
