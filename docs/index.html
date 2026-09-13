@@ -3,59 +3,369 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ozymandias</title>
+    <title>Ozymandias — Archive System</title>
     <link rel="icon" href="pokeball.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/my_style.css" />
   </head>
+
   <body>
-    <!-- Fake COBOL Title Bar -->
-    <div class="title-bar">
-      <span class="title-text">01001010 01101111 01110011 01100101 01110000 01101000</span>
-    </div>
+    <main class="terminal">
+      <div class="status">
+        <span class="panel">@MAIN</span>
+        <span class="binary" title="01001010 01101111 01110011 01100101 01110000 01101000"
+          >01001010 01101111 01110011 01100101 01110000 01101000</span
+        >
+        <span class="clock" id="clock">--:--:--</span>
+      </div>
+      <div class="rule" aria-hidden="true">
+        ────────────────────────────────────────────────────────────────────────
+      </div>
 
-    <!-- Command Line Input -->
-    <div class="command-bar">
-      <a href="https://www.poetryfoundation.org/poems/46565/ozymandias" target="_blank" class="link-text">ORIGIN</a>
-    </div>
-    <div class="command-bar">
-      <a href="https://jdowns525.github.io/ozymandiasportfolio.github.io/" target="_blank" class="link-text">PHOTO ARCHIVE</a>
-    </div>
-    <div class="command-bar">
-      <a href="chat.html" class="link-text">INITIATE CONVERSATION PROTOCOL</a> <span class="blinking-cursor">_</span>
-    </div>
+      <h1 class="masthead">OZYMANDIAS ARCHIVE SYSTEM</h1>
+      <p class="strapline">
+        Photographs, zines, code, and a few noises. Pick a number below, or type
+        one and press enter.
+      </p>
 
-    
-    <!-- Terminal Content (Simulated COBOL Layout) -->
-    <div class="terminal-content">
-      <pre>
-<span class="header">*****ZAP****AUTOSAVE****** TOP OF DATA *****</span>
+      <form class="command" id="command" autocomplete="off">
+        <label for="option">OPTION ===&gt;</label>
+        <input
+          id="option"
+          name="option"
+          type="text"
+          maxlength="12"
+          placeholder="number or name"
+          aria-describedby="message"
+        />
+        <span class="cursor" aria-hidden="true">█</span>
+      </form>
 
-<span class="line-number">000001</span> <span class="keyword">// WELCOME TO THE ARCHIVE SYSTEM</span>,
-<span class="line-number">000002</span> <span class="comment">//</span>        <span class="white">BY OZYMANDIAS</span>, 
-<span class="line-number">000003</span> <span class="header">/************************************</span>
-<span class="line-number">000004</span> <span class="comment">//</span> <span class="cyan">WORK:</span>
-<span class="line-number">000005</span> <span class="comment">//</span> <a href="https://downsjo.gumroad.com/l/xurrol?_gl=1" target="_blank" class="link-text">ZINE 1</a>
-<span class="line-number">000006</span> <span class="comment">//</span> <a href="https://downsjo.gumroad.com/l/xjsjw?_gl=1" target="_blank" class="link-text">ZINE 2</a>
-<span class="line-number">000007</span> <span class="comment">//</span> <a href="https://github.com/jdowns525/fujifilm_simulations" target="_blank" class="link-text">FUJI SIMS RECIPES</a>
-<span class="line-number">000009</span> <span class="comment">//</span> <a href="https://medium.com/@downsjosseph" target="_blank" class="link-text">BLOG</a>
-<span class="line-number">000010</span> <span class="header">/************************************</span>
+      <p class="message" id="message" role="status">
+        Ready. Enter <b>0</b> to start a conversation.
+      </p>
 
-<span class="line-number">000000</span> <span class="comment">//</span> <span class="cyan">SOCIAL LINKS:</span>
-<span class="line-number">000001</span> <span class="comment">//</span> <a href="https://www.instagram.com/0zymanndias" target="_blank" class="link-text">INSTAGRAM</a>
-<span class="line-number">000002</span> <span class="comment">//</span> <a href="https://m.soundcloud.com/0zymanndias" target="_blank" class="link-text">SOUNDCLOUD</a>
-<span class="line-number">000003</span> <span class="comment">//</span> <a href="https://strava.app.link/RF4qezfm0Wb" target="_blank" class="link-text">STRAVA</a>
-<span class="line-number">000004</span> <span class="comment">//</span> <a href="https://www.tiktok.com/@0zymanndias?_t=ZP-904tGFoKYYw&_r=1" target="_blank" class="link-text">TIKTOK</a>
-<span class="line-number">000005</span> <span class="header">/************************************</span>
+      <section class="group">
+        <h2>Talk</h2>
+        <ol>
+          <li>
+            <a class="opt" href="chat.html" data-key="0" data-alias="chat talk">
+              <span class="key">0</span>
+              <span class="name">CHAT</span>
+              <span class="note">conversation protocol</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="opt"
+              href="mailto:downsjosseph@gmail.com"
+              data-key="1"
+              data-alias="email mail"
+            >
+              <span class="key">1</span>
+              <span class="name">EMAIL</span>
+              <span class="note">downsjosseph@gmail.com</span>
+            </a>
+          </li>
+        </ol>
+      </section>
 
-<span class="line-number">000000</span> <span class="cyan">FILES:</span>
-<span class="line-number">000001</span> <span class="comment">//</span> <a href="https://drive.google.com/file/d/1tuN7BKaBPHiA78ve-pesFua62NLJkPsE/view?usp=drive_link" target="_blank" class="link-text">ZINE TEMPLATE (pages .template)</a>
-<span class="line-number">000002</span> <span class="comment">//</span> <a href="https://github.com/jdowns525/neetcode_75_answers" target="_blank" class="link-text">NEETCODE 75 ANSWERS REPO</a>
+      <section class="group">
+        <h2>Work</h2>
+        <ol>
+          <li>
+            <a
+              class="opt"
+              href="https://jdowns525.github.io/ozymandiasportfolio.github.io/"
+              target="_blank"
+              rel="noopener"
+              data-key="2"
+              data-alias="photos photo archive portfolio"
+            >
+              <span class="key">2</span>
+              <span class="name">PHOTOS</span>
+              <span class="note">the picture archive</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="opt"
+              href="https://downsjo.gumroad.com/l/xurrol?_gl=1"
+              target="_blank"
+              rel="noopener"
+              data-key="3"
+              data-alias="zine1 zine 1"
+            >
+              <span class="key">3</span>
+              <span class="name">ZINE ONE</span>
+              <span class="note">print, on gumroad</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="opt"
+              href="https://downsjo.gumroad.com/l/xjsjw?_gl=1"
+              target="_blank"
+              rel="noopener"
+              data-key="4"
+              data-alias="zine2 zine 2"
+            >
+              <span class="key">4</span>
+              <span class="name">ZINE TWO</span>
+              <span class="note">print, on gumroad</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="opt"
+              href="https://medium.com/@downsjosseph"
+              target="_blank"
+              rel="noopener"
+              data-key="5"
+              data-alias="blog writing medium"
+            >
+              <span class="key">5</span>
+              <span class="name">BLOG</span>
+              <span class="note">writing, on medium</span>
+            </a>
+          </li>
+        </ol>
+      </section>
 
-<span class="line-number">000000</span> <span class="cyan">CONTACT ME:</span>
-<span class="line-number">000001</span> <a href="mailto:downsjosseph@gmail.com" target="_blank" class="link-text">EMAIL</a>
+      <section class="group">
+        <h2>Files</h2>
+        <ol>
+          <li>
+            <a
+              class="opt"
+              href="https://github.com/jdowns525/fujifilm_simulations"
+              target="_blank"
+              rel="noopener"
+              data-key="6"
+              data-alias="fuji recipes sims"
+            >
+              <span class="key">6</span>
+              <span class="name">FUJI SIMS</span>
+              <span class="note">film recipes, repo</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="opt"
+              href="https://drive.google.com/file/d/1tuN7BKaBPHiA78ve-pesFua62NLJkPsE/view?usp=drive_link"
+              target="_blank"
+              rel="noopener"
+              data-key="7"
+              data-alias="template zine template pages"
+            >
+              <span class="key">7</span>
+              <span class="name">ZINE TEMPLATE</span>
+              <span class="note">pages .template, free</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="opt"
+              href="https://github.com/jdowns525/neetcode_75_answers"
+              target="_blank"
+              rel="noopener"
+              data-key="8"
+              data-alias="neetcode leetcode 75"
+            >
+              <span class="key">8</span>
+              <span class="name">NEETCODE 75</span>
+              <span class="note">worked answers, repo</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="opt"
+              href="https://www.poetryfoundation.org/poems/46565/ozymandias"
+              target="_blank"
+              rel="noopener"
+              data-key="9"
+              data-alias="origin poem shelley ozymandias"
+            >
+              <span class="key">9</span>
+              <span class="name">ORIGIN</span>
+              <span class="note">Shelley, 1818 — the name</span>
+            </a>
+          </li>
+        </ol>
+      </section>
 
-<span class="header">*****ZAP****AUTOSAVE****** BOTTOM OF DATA **</span>
-      </pre>
-    </div>
+      <section class="group">
+        <h2>Elsewhere</h2>
+        <ol>
+          <li>
+            <a
+              class="opt"
+              href="https://www.instagram.com/0zymanndias"
+              target="_blank"
+              rel="noopener"
+              data-key="10"
+              data-alias="instagram ig insta"
+            >
+              <span class="key">10</span>
+              <span class="name">INSTAGRAM</span>
+              <span class="note">@0zymanndias</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="opt"
+              href="https://m.soundcloud.com/0zymanndias"
+              target="_blank"
+              rel="noopener"
+              data-key="11"
+              data-alias="soundcloud music sc"
+            >
+              <span class="key">11</span>
+              <span class="name">SOUNDCLOUD</span>
+              <span class="note">noises</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="opt"
+              href="https://strava.app.link/RF4qezfm0Wb"
+              target="_blank"
+              rel="noopener"
+              data-key="12"
+              data-alias="strava rides cycling bike"
+            >
+              <span class="key">12</span>
+              <span class="name">STRAVA</span>
+              <span class="note">rides</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="opt"
+              href="https://www.tiktok.com/@0zymanndias?_t=ZP-904tGFoKYYw&amp;_r=1"
+              target="_blank"
+              rel="noopener"
+              data-key="13"
+              data-alias="tiktok video"
+            >
+              <span class="key">13</span>
+              <span class="name">TIKTOK</span>
+              <span class="note">@0zymanndias</span>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <div class="rule" aria-hidden="true">
+        ────────────────────────────────────────────────────────────────────────
+      </div>
+      <p class="keys">
+        <span><b>ENTER</b> select</span>
+        <span><b>TAB</b> next</span>
+        <span><b>ESC</b> clear</span>
+      </p>
+    </main>
+
+    <script>
+      (function () {
+        var form = document.getElementById("command");
+        var input = document.getElementById("option");
+        var message = document.getElementById("message");
+        var clock = document.getElementById("clock");
+        var options = Array.prototype.slice.call(
+          document.querySelectorAll(".opt")
+        );
+
+        function tick() {
+          var d = new Date();
+          clock.textContent = [d.getHours(), d.getMinutes(), d.getSeconds()]
+            .map(function (n) {
+              return String(n).padStart(2, "0");
+            })
+            .join(":");
+        }
+        tick();
+        setInterval(tick, 1000);
+
+        function say(text, state) {
+          message.textContent = text;
+          if (state) {
+            message.setAttribute("data-state", state);
+          } else {
+            message.removeAttribute("data-state");
+          }
+        }
+
+        function find(query) {
+          var q = query.trim().toLowerCase();
+          if (!q) return null;
+          for (var i = 0; i < options.length; i++) {
+            var el = options[i];
+            if (el.dataset.key === q) return el;
+            var name = el.querySelector(".name").textContent.toLowerCase();
+            if (name === q) return el;
+            var aliases = (el.dataset.alias || "").split(" ");
+            if (aliases.indexOf(q) > -1) return el;
+            if (name.indexOf(q) === 0 && q.length > 2) return el;
+          }
+          return null;
+        }
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var target = find(input.value);
+          if (!target) {
+            say("No option matches that. Try a number from 0 to 13.", "error");
+            return;
+          }
+          target.classList.add("is-armed");
+          say("Opening " + target.querySelector(".name").textContent + "…");
+          window.setTimeout(function () {
+            target.click();
+            target.classList.remove("is-armed");
+            input.value = "";
+          }, 180);
+        });
+
+        input.addEventListener("input", function () {
+          var target = find(input.value);
+          options.forEach(function (el) {
+            el.classList.toggle("is-armed", el === target);
+          });
+          if (target) {
+            say("Enter to open " + target.querySelector(".name").textContent + ".");
+          } else if (input.value.trim()) {
+            say("No match yet.", "error");
+          } else {
+            say("Ready.");
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            input.value = "";
+            options.forEach(function (el) {
+              el.classList.remove("is-armed");
+            });
+            say("Ready.");
+            input.focus();
+            return;
+          }
+          if (
+            document.activeElement !== input &&
+            event.key.length === 1 &&
+            !event.metaKey &&
+            !event.ctrlKey
+          ) {
+            input.focus();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
