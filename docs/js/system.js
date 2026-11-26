@@ -20,7 +20,7 @@
   var MENU = [
     { key: "0", name: "CHAT", note: "conversation protocol", url: "chat.html", external: false, alias: ["chat", "talk", "mavis"] },
     { key: "1", name: "EMAIL", note: "downsjosseph@gmail.com", url: "mailto:downsjosseph@gmail.com", external: false, alias: ["email", "mail", "contact"] },
-    { key: "2", name: "PHOTOS", note: "the picture archive", url: "https://jdowns525.github.io/ozymandiasportfolio.github.io/", external: true, alias: ["photos", "photo", "archive", "portfolio"] },
+    { key: "2", name: "PHOTOS", note: "the picture archive", url: "photos.html", external: false, alias: ["photos", "photo", "archive", "portfolio"] },
     { key: "3", name: "ZINE ONE", note: "print, on gumroad", url: "https://downsjo.gumroad.com/l/xurrol?_gl=1", external: true, alias: ["zine1", "zine one"] },
     { key: "4", name: "ZINE TWO", note: "print, on gumroad", url: "https://downsjo.gumroad.com/l/xjsjw?_gl=1", external: true, alias: ["zine2", "zine two"] },
     { key: "5", name: "BLOG", note: "writing, on medium", url: "https://medium.com/@downsjosseph", external: true, alias: ["blog", "writing", "medium"] },
