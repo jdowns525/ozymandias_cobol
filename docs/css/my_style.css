@@ -476,12 +476,156 @@ body.is-scrolling {
   max-width: 62ch;
 }
 
+/* 8d. Mainframe listings (timeline.html, atlantis.html) ==================== */
+
+.terminal--wide {
+  max-width: 116ch;
+}
+
+.histo {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  color: var(--green);
+  font: inherit;
+  line-height: 1.25;
+}
+
+.report .blurb {
+  margin-bottom: calc(var(--row) * 0.4);
+}
+
+.rec {
+  display: grid;
+  gap: 0 1ch;
+  align-items: baseline;
+}
+
+.rec .seq {
+  color: var(--dimmer);
+  user-select: none;
+}
+
+.rec .yr {
+  color: var(--dim);
+}
+
+.rec .mdl {
+  color: var(--white);
+}
+
+.rec .bld,
+.rec .nte {
+  color: var(--dim);
+  overflow-wrap: anywhere;
+}
+
+.rec--head {
+  color: var(--dim);
+  border-bottom: 1px solid var(--dimmer);
+  margin-bottom: calc(var(--row) * 0.25);
+}
+
+.rec--tl {
+  grid-template-columns: 6ch 8ch 22ch minmax(0, 1fr);
+}
+
+.rec--gen {
+  grid-template-columns: 6ch 4ch 22ch 26ch minmax(0, 1fr);
+}
+
+.rec--bld {
+  grid-template-columns: 6ch 19ch 16ch 28ch minmax(0, 1fr) 5ch;
+}
+
+.rec--cmt {
+  grid-template-columns: 6ch 1ch minmax(0, 1fr);
+  color: var(--dim);
+}
+
+.rec--cmt .cmt {
+  color: var(--cyan);
+}
+
+.rec--cmt .cmt-t {
+  overflow-wrap: anywhere;
+}
+
+.rec--cmt .cmt-t b {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.rec--cmt .cmt-t--head {
+  color: var(--cyan);
+}
+
+.conf-HIGH {
+  color: var(--green);
+}
+
+.conf-MED {
+  color: var(--dim);
+}
+
+.conf-LOW {
+  color: var(--amber);
+}
+
 /* 9. Responsive + motion =================================================== */
 
 @media (prefers-reduced-motion: reduce) {
   .blinking-cursor,
   .cursor {
     animation: none;
+  }
+}
+
+/* Listings: below this width the columns stack into labelled lines. */
+@media (max-width: 56rem) {
+  .rec--tl,
+  .rec--gen,
+  .rec--bld {
+    display: block;
+    padding: calc(var(--row) * 0.2) 0;
+  }
+
+  .rec--head,
+  .rec .seq {
+    display: none;
+  }
+
+  .rec--tl .yr,
+  .rec--tl .mdl {
+    display: inline;
+  }
+
+  .rec--tl .yr {
+    margin-right: 1ch;
+  }
+
+  .rec--tl .nte,
+  .rec--gen > span,
+  .rec--bld > span {
+    display: block;
+  }
+
+  .rec--gen > span::before,
+  .rec--bld > span::before {
+    content: attr(data-label) ": ";
+    color: var(--dimmer);
+  }
+
+  .rec--bld > .mdl::before {
+    content: "";
+  }
+
+  .rec--cmt {
+    grid-template-columns: 1ch minmax(0, 1fr);
+  }
+
+  .rec--cmt .seq {
+    display: none;
   }
 }
 
