@@ -26,7 +26,6 @@
     { key: "5", name: "BLOG", note: "writing, on medium", url: "https://medium.com/@downsjosseph", external: true, alias: ["blog", "writing", "medium"] },
     { key: "6", name: "FUJI SIMS", note: "8 film recipes, X-Trans V", url: "fuji.html", external: false, alias: ["fuji", "sims", "recipes", "film"] },
     { key: "7", name: "ZINE TEMPLATE", note: "pages .template, free", url: "https://drive.google.com/file/d/1tuN7BKaBPHiA78ve-pesFua62NLJkPsE/view?usp=drive_link", external: true, alias: ["template", "zine template"] },
-    { key: "8", name: "NEETCODE 75", note: "worked answers, repo", url: "https://github.com/jdowns525/neetcode_75_answers", external: true, alias: ["neetcode", "leetcode", "75"] },
     { key: "9", name: "ORIGIN", note: "Origin of Ozymandias name, which is what I go by.", url: "origin.html", external: false, alias: ["origin", "poem", "shelley", "ozymandias"] },
     { key: "10", name: "INSTAGRAM", note: "@0zymanndias", url: "https://www.instagram.com/0zymanndias", external: true, alias: ["instagram", "insta", "ig"] },
     { key: "11", name: "SOUNDCLOUD", note: "noises", url: "https://m.soundcloud.com/0zymanndias", external: true, alias: ["soundcloud", "music", "sc"] },
@@ -38,7 +37,7 @@
   var GROUPS = [
     { title: "Talk", keys: ["0", "1"] },
     { title: "Work", keys: ["2", "3", "4", "5"] },
-    { title: "Files", keys: ["6", "7", "8", "9", "14"] },
+    { title: "Files", keys: ["6", "7", "9", "14"] },
     { title: "Elsewhere", keys: ["10", "11", "12", "13"] }
   ];
 
