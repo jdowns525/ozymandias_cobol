@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ozymandias — Fuji Sims</title>
+    <meta name="description" content="Film simulation recipes for the Fujifilm X-Trans V sensor: eight recipes with every setting written out." />
+    <link rel="icon" href="pokeball.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/my_style.css" />
+  </head>
+
+  <body class="is-scrolling">
+    <main class="terminal terminal--wide">
+      <div class="status">
+        <span class="binary">FUJI-SIMS / X-TRANS V</span>
+        <span class="clock" id="clock">--:--:--</span>
+      </div>
+      <div class="rule" aria-hidden="true">
+        ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      </div>
+
+      <p class="back"><a class="link-text" href="index.html">&lt;= MAIN MENU</a></p>
+
+      <h1 class="masthead">FUJI SIMS</h1>
+      <p class="strapline">Film simulation recipes for the Fujifilm X-Trans V sensor. Eight recipes, each written out setting by setting.</p>
+
+      <section class="group report">
+        <h2>A. At a glance</h2>
+        <p class="blurb">The main settings side by side. Each recipe is written out in full in section B.</p>
+        <div class="rec rec--fz rec--head" aria-hidden="true"><span class="seq">SEQ</span><span>RECIPE</span><span>FILM SIMULATION</span><span>DYNAMIC RANGE</span><span>GRAIN</span><span>ISO</span></div>
+        <div class="rec rec--fz"><span class="seq">000100</span><span class="mdl" data-label="RECIPE">EKTACHROME 160T</span><span class="bld" data-label="SIMULATION">Classic Chrome</span><span class="yr" data-label="DR">DR200</span><span class="bld" data-label="GRAIN">Weak</span><span class="yr" data-label="ISO">125</span></div>
+        <div class="rec rec--fz"><span class="seq">000200</span><span class="mdl" data-label="RECIPE">PORTRA 400 BW</span><span class="bld" data-label="SIMULATION">Acros</span><span class="yr" data-label="DR">DR400</span><span class="bld" data-label="GRAIN">Weak, Small</span><span class="yr" data-label="ISO">400</span></div>
+        <div class="rec rec--fz"><span class="seq">000300</span><span class="mdl" data-label="RECIPE">EASTMAN 5247</span><span class="bld" data-label="SIMULATION">Classic Chrome</span><span class="yr" data-label="DR">200% or 400%</span><span class="bld" data-label="GRAIN">Strong, Large</span><span class="yr" data-label="ISO">not set</span></div>
+        <div class="rec rec--fz"><span class="seq">000400</span><span class="mdl" data-label="RECIPE">EASTMAN DOUBLE-X</span><span class="bld" data-label="SIMULATION">Acros+R</span><span class="yr" data-label="DR">DR400</span><span class="bld" data-label="GRAIN">Strong, Large</span><span class="yr" data-label="ISO">125</span></div>
+        <div class="rec rec--fz"><span class="seq">000500</span><span class="mdl" data-label="RECIPE">VISION2 50D</span><span class="bld" data-label="SIMULATION">Provia/Standard</span><span class="yr" data-label="DR">DR200</span><span class="bld" data-label="GRAIN">Weak, Small</span><span class="yr" data-label="ISO">125</span></div>
+        <div class="rec rec--fz"><span class="seq">000600</span><span class="mdl" data-label="RECIPE">NATURA 1600</span><span class="bld" data-label="SIMULATION">Classic Chrome</span><span class="yr" data-label="DR">DR400</span><span class="bld" data-label="GRAIN">Strong, Large</span><span class="yr" data-label="ISO">1600</span></div>
+        <div class="rec rec--fz"><span class="seq">000700</span><span class="mdl" data-label="RECIPE">SILBERSALZ 200T</span><span class="bld" data-label="SIMULATION">Eterna Cinema</span><span class="yr" data-label="DR">DR200</span><span class="bld" data-label="GRAIN">Weak or Strong</span><span class="yr" data-label="ISO">Base ISO</span></div>
+        <div class="rec rec--fz"><span class="seq">000800</span><span class="mdl" data-label="RECIPE">SUPERIA VENUS 800</span><span class="bld" data-label="SIMULATION">Provia/Standard</span><span class="yr" data-label="DR">DR400</span><span class="bld" data-label="GRAIN">Strong, Small</span><span class="yr" data-label="ISO">125</span></div>
+      </section>
+
+      <section class="group report">
+        <h2>B. Recipes</h2>
+        <p class="blurb">Settings for the Fujifilm X-Trans V sensor, copied from the files in the repo. Notes in brackets are the original comments.</p>
+        <div class="rec rec--cmt"><span class="seq">000900</span><span class="cmt">*</span><span class="cmt-t cmt-t--head">RECIPE 1 OF 8  EKTACHROME 160T  (Ektachrome_160t.yaml)</span></div>
+        <div class="rec rec--kv"><span class="seq">001000</span><span class="lbl">FILM SIMULATION</span><span class="val">Classic Chrome</span></div>
+        <div class="rec rec--kv"><span class="seq">001100</span><span class="lbl">DYNAMIC RANGE</span><span class="val">DR200</span></div>
+        <div class="rec rec--kv"><span class="seq">001200</span><span class="lbl">GRAIN EFFECT</span><span class="val">Weak</span></div>
+        <div class="rec rec--kv"><span class="seq">001300</span><span class="lbl">COLOR CHROME EFFECT</span><span class="val">Strong</span></div>
+        <div class="rec rec--kv"><span class="seq">001400</span><span class="lbl">COLOR CHROME FX BLUE</span><span class="val">Weak</span></div>
+        <div class="rec rec--kv"><span class="seq">001500</span><span class="lbl">WHITE BALANCE</span><span class="val">Kelvin (3200K)</span></div>
+        <div class="rec rec--kv"><span class="seq">001600</span><span class="lbl">WB SHIFT</span><span class="val">Red +2, Blue -4</span></div>
+        <div class="rec rec--kv"><span class="seq">001700</span><span class="lbl">HIGHLIGHT TONE</span><span class="val">0</span></div>
+        <div class="rec rec--kv"><span class="seq">001800</span><span class="lbl">SHADOW TONE</span><span class="val">-1</span></div>
+        <div class="rec rec--kv"><span class="seq">001900</span><span class="lbl">COLOR</span><span class="val">+2</span></div>
+        <div class="rec rec--kv"><span class="seq">002000</span><span class="lbl">SHARPNESS</span><span class="val">+1</span></div>
+        <div class="rec rec--kv"><span class="seq">002100</span><span class="lbl">HIGH ISO NR</span><span class="val">-1</span></div>
+        <div class="rec rec--kv"><span class="seq">002200</span><span class="lbl">CLARITY</span><span class="val">0</span></div>
+        <div class="rec rec--kv"><span class="seq">002300</span><span class="lbl">ISO</span><span class="val">125</span></div>
+        <div class="rec rec--kv"><span class="seq">002400</span><span class="lbl">EXPOSURE COMP</span><span class="val">Typically -1 to +1, depending on the scene</span></div>
+        <div class="rec rec--cmt"><span class="seq">002500</span><span class="cmt">*</span><span class="cmt-t cmt-t--head">RECIPE 2 OF 8  PORTRA 400 BW  (Portra_400BW.yml)</span></div>
+        <div class="rec rec--kv"><span class="seq">002600</span><span class="lbl">FILM SIMULATION</span><span class="val">Acros (+Ye for subtle contrast)</span></div>
+        <div class="rec rec--kv"><span class="seq">002700</span><span class="lbl">DYNAMIC RANGE</span><span class="val">DR400 (for smooth transitions)</span></div>
+        <div class="rec rec--kv"><span class="seq">002800</span><span class="lbl">GRAIN EFFECT</span><span class="val">Weak, Small</span></div>
+        <div class="rec rec--kv"><span class="seq">002900</span><span class="lbl">COLOR CHROME FX BLUE</span><span class="val">Off</span></div>
+        <div class="rec rec--kv"><span class="seq">003000</span><span class="lbl">MONOCHROME COLOR</span><span class="val">+1 WC, +1 MG (for a warm-neutral look)</span></div>
+        <div class="rec rec--kv"><span class="seq">003100</span><span class="lbl">HIGHLIGHT TONE</span><span class="val">-1</span></div>
+        <div class="rec rec--kv"><span class="seq">003200</span><span class="lbl">SHADOW TONE</span><span class="val">-1</span></div>
+        <div class="rec rec--kv"><span class="seq">003300</span><span class="lbl">SHARPNESS</span><span class="val">-1</span></div>
+        <div class="rec rec--kv"><span class="seq">003400</span><span class="lbl">NOISE REDUCTION</span><span class="val">-4</span></div>
+        <div class="rec rec--kv"><span class="seq">003500</span><span class="lbl">ISO</span><span class="val">400 (for a film-like look)</span></div>
+        <div class="rec rec--cmt"><span class="seq">003600</span><span class="cmt">*</span><span class="cmt-t cmt-t--head">RECIPE 3 OF 8  EASTMAN 5247  (kodak_eastman_5247.yaml)</span></div>
+        <div class="rec rec--kv"><span class="seq">003700</span><span class="lbl">FILM SIMULATION</span><span class="val">Classic Chrome</span></div>
+        <div class="rec rec--kv"><span class="seq">003800</span><span class="lbl">DYNAMIC RANGE</span><span class="val">200% or 400%</span></div>
+        <div class="rec rec--kv"><span class="seq">003900</span><span class="lbl">GRAIN EFFECT</span><span class="val">Strong, Large</span></div>
+        <div class="rec rec--kv"><span class="seq">004000</span><span class="lbl">COLOR CHROME EFFECT</span><span class="val">Strong</span></div>
+        <div class="rec rec--kv"><span class="seq">004100</span><span class="lbl">WB TUNGSTEN (3200K)</span><span class="val">Red -3, Blue -2</span></div>
+        <div class="rec rec--kv"><span class="seq">004200</span><span class="lbl">WB DAYLIGHT (5000 OR 5500K)</span><span class="val">Red -3, Blue -2. Use an 85B filter in this scenario</span></div>
+        <div class="rec rec--kv"><span class="seq">004300</span><span class="lbl">HIGHLIGHT TONE</span><span class="val">-1</span></div>
+        <div class="rec rec--kv"><span class="seq">004400</span><span class="lbl">SHADOW TONE</span><span class="val">+2</span></div>
+        <div class="rec rec--kv"><span class="seq">004500</span><span class="lbl">COLOR</span><span class="val">+2</span></div>
+        <div class="rec rec--kv"><span class="seq">004600</span><span class="lbl">SHARPNESS</span><span class="val">-1</span></div>
+        <div class="rec rec--kv"><span class="seq">004700</span><span class="lbl">NOISE REDUCTION</span><span class="val">-4</span></div>
+        <div class="rec rec--cmt"><span class="seq">004800</span><span class="cmt">*</span><span class="cmt-t cmt-t--head">RECIPE 4 OF 8  EASTMAN DOUBLE-X  (kodak_eastman_double_x.yml)</span></div>
+        <div class="rec rec--kv"><span class="seq">004900</span><span class="lbl">FILM SIMULATION</span><span class="val">Acros+R</span></div>
+        <div class="rec rec--kv"><span class="seq">005000</span><span class="lbl">DYNAMIC RANGE</span><span class="val">DR400</span></div>
+        <div class="rec rec--kv"><span class="seq">005100</span><span class="lbl">GRAIN EFFECT</span><span class="val">Strong, Large</span></div>
+        <div class="rec rec--kv"><span class="seq">005200</span><span class="lbl">HIGHLIGHT TONE</span><span class="val">+2</span></div>
+        <div class="rec rec--kv"><span class="seq">005300</span><span class="lbl">SHADOW TONE</span><span class="val">+2</span></div>
+        <div class="rec rec--kv"><span class="seq">005400</span><span class="lbl">SHARPNESS</span><span class="val">+1</span></div>
+        <div class="rec rec--kv"><span class="seq">005500</span><span class="lbl">NOISE REDUCTION</span><span class="val">-2</span></div>
+        <div class="rec rec--kv"><span class="seq">005600</span><span class="lbl">ISO</span><span class="val">125 (adjust higher if necessary)</span></div>
+        <div class="rec rec--kv"><span class="seq">005700</span><span class="lbl">EXPOSURE COMP</span><span class="val">Typically -1 to +1, depending on the scene</span></div>
+        <div class="rec rec--cmt"><span class="seq">005800</span><span class="cmt">*</span><span class="cmt-t cmt-t--head">RECIPE 5 OF 8  VISION2 50D  (kodak_vision2_50d.yaml)</span></div>
+        <div class="rec rec--kv"><span class="seq">005900</span><span class="lbl">FILM SIMULATION</span><span class="val">Provia/Standard</span></div>
+        <div class="rec rec--kv"><span class="seq">006000</span><span class="lbl">DYNAMIC RANGE</span><span class="val">DR200</span></div>
+        <div class="rec rec--kv"><span class="seq">006100</span><span class="lbl">GRAIN EFFECT</span><span class="val">Weak, Small</span></div>
+        <div class="rec rec--kv"><span class="seq">006200</span><span class="lbl">COLOR CHROME EFFECT</span><span class="val">Weak</span></div>
+        <div class="rec rec--kv"><span class="seq">006300</span><span class="lbl">COLOR CHROME FX BLUE</span><span class="val">Off</span></div>
+        <div class="rec rec--kv"><span class="seq">006400</span><span class="lbl">WHITE BALANCE</span><span class="val">Daylight</span></div>
+        <div class="rec rec--kv"><span class="seq">006500</span><span class="lbl">WB SHIFT</span><span class="val">Red +2, Blue -2</span></div>
+        <div class="rec rec--kv"><span class="seq">006600</span><span class="lbl">HIGHLIGHT TONE</span><span class="val">-1</span></div>
+        <div class="rec rec--kv"><span class="seq">006700</span><span class="lbl">SHADOW TONE</span><span class="val">+1</span></div>
+        <div class="rec rec--kv"><span class="seq">006800</span><span class="lbl">COLOR</span><span class="val">0</span></div>
+        <div class="rec rec--kv"><span class="seq">006900</span><span class="lbl">SHARPNESS</span><span class="val">0</span></div>
+        <div class="rec rec--kv"><span class="seq">007000</span><span class="lbl">NOISE REDUCTION</span><span class="val">-2</span></div>
+        <div class="rec rec--kv"><span class="seq">007100</span><span class="lbl">ISO</span><span class="val">125</span></div>
+        <div class="rec rec--kv"><span class="seq">007200</span><span class="lbl">EXPOSURE COMP</span><span class="val">Typically -1 to +1 (for daylight shoots, +1)</span></div>
+        <div class="rec rec--cmt"><span class="seq">007300</span><span class="cmt">*</span><span class="cmt-t cmt-t--head">RECIPE 6 OF 8  NATURA 1600  (natura_1600.yaml)</span></div>
+        <div class="rec rec--kv"><span class="seq">007400</span><span class="lbl">FILM SIMULATION</span><span class="val">Classic Chrome (recommended, but feel free to experiment)</span></div>
+        <div class="rec rec--kv"><span class="seq">007500</span><span class="lbl">DYNAMIC RANGE</span><span class="val">DR400 (always)</span></div>
+        <div class="rec rec--kv"><span class="seq">007600</span><span class="lbl">GRAIN EFFECT</span><span class="val">Strong, Large</span></div>
+        <div class="rec rec--kv"><span class="seq">007700</span><span class="lbl">WHITE BALANCE</span><span class="val">Daylight</span></div>
+        <div class="rec rec--kv"><span class="seq">007800</span><span class="lbl">WB SHIFT</span><span class="val">Red +2, Blue -3</span></div>
+        <div class="rec rec--kv"><span class="seq">007900</span><span class="lbl">HIGHLIGHTS</span><span class="val">+1</span></div>
+        <div class="rec rec--kv"><span class="seq">008000</span><span class="lbl">SHADOWS</span><span class="val">+1</span></div>
+        <div class="rec rec--kv"><span class="seq">008100</span><span class="lbl">COLOR</span><span class="val">+2</span></div>
+        <div class="rec rec--kv"><span class="seq">008200</span><span class="lbl">SHARPNESS</span><span class="val">+1</span></div>
+        <div class="rec rec--kv"><span class="seq">008300</span><span class="lbl">NOISE REDUCTION</span><span class="val">-2</span></div>
+        <div class="rec rec--kv"><span class="seq">008400</span><span class="lbl">ISO</span><span class="val">1600</span></div>
+        <div class="rec rec--cmt"><span class="seq">008500</span><span class="cmt">*</span><span class="cmt-t cmt-t--head">RECIPE 7 OF 8  SILBERSALZ 200T  (silbersalz_200t.yaml)</span></div>
+        <div class="rec rec--kv"><span class="seq">008600</span><span class="lbl">FILM SIMULATION</span><span class="val">Eterna Cinema</span></div>
+        <div class="rec rec--kv"><span class="seq">008700</span><span class="lbl">DYNAMIC RANGE</span><span class="val">DR200 (use DR400 in high-contrast scenes)</span></div>
+        <div class="rec rec--kv"><span class="seq">008800</span><span class="lbl">GRAIN EFFECT</span><span class="val">Weak or Strong (personal preference)</span></div>
+        <div class="rec rec--kv"><span class="seq">008900</span><span class="lbl">COLOR CHROME EFFECT</span><span class="val">Off (or Weak if you want a slight boost)</span></div>
+        <div class="rec rec--kv"><span class="seq">009000</span><span class="lbl">COLOR CHROME FX BLUE</span><span class="val">Off</span></div>
+        <div class="rec rec--kv"><span class="seq">009100</span><span class="lbl">WHITE BALANCE</span><span class="val">Auto</span></div>
+        <div class="rec rec--kv"><span class="seq">009200</span><span class="lbl">WB SHIFT</span><span class="val">R -2, B -4</span></div>
+        <div class="rec rec--kv"><span class="seq">009300</span><span class="lbl">HIGHLIGHT</span><span class="val">-1</span></div>
+        <div class="rec rec--kv"><span class="seq">009400</span><span class="lbl">SHADOW</span><span class="val">+1</span></div>
+        <div class="rec rec--kv"><span class="seq">009500</span><span class="lbl">COLOR</span><span class="val">+1</span></div>
+        <div class="rec rec--kv"><span class="seq">009600</span><span class="lbl">SHARPNESS</span><span class="val">-2</span></div>
+        <div class="rec rec--kv"><span class="seq">009700</span><span class="lbl">HIGH ISO NR</span><span class="val">-4</span></div>
+        <div class="rec rec--kv"><span class="seq">009800</span><span class="lbl">CLARITY</span><span class="val">0 or -1 (note that Clarity slows down writing speed)</span></div>
+        <div class="rec rec--kv"><span class="seq">009900</span><span class="lbl">ISO</span><span class="val">Base ISO (125, 160, or 200)</span></div>
+        <div class="rec rec--kv"><span class="seq">010000</span><span class="lbl">EXPOSURE COMP</span><span class="val">-1/3 to -2/3 (optional, to preserve highlights)</span></div>
+        <div class="rec rec--cmt"><span class="seq">010100</span><span class="cmt">*</span><span class="cmt-t cmt-t--head">RECIPE 8 OF 8  SUPERIA VENUS 800  (superia_venus_800.yaml)</span></div>
+        <div class="rec rec--kv"><span class="seq">010200</span><span class="lbl">FILM SIMULATION</span><span class="val">Provia/Standard</span></div>
+        <div class="rec rec--kv"><span class="seq">010300</span><span class="lbl">DYNAMIC RANGE</span><span class="val">DR400</span></div>
+        <div class="rec rec--kv"><span class="seq">010400</span><span class="lbl">GRAIN EFFECT</span><span class="val">Strong, Small</span></div>
+        <div class="rec rec--kv"><span class="seq">010500</span><span class="lbl">COLOR CHROME EFFECT</span><span class="val">Strong</span></div>
+        <div class="rec rec--kv"><span class="seq">010600</span><span class="lbl">COLOR CHROME FX BLUE</span><span class="val">Strong</span></div>
+        <div class="rec rec--kv"><span class="seq">010700</span><span class="lbl">WHITE BALANCE</span><span class="val">Auto</span></div>
+        <div class="rec rec--kv"><span class="seq">010800</span><span class="lbl">WB SHIFT</span><span class="val">Red +2, Blue -2</span></div>
+        <div class="rec rec--kv"><span class="seq">010900</span><span class="lbl">HIGHLIGHT TONE</span><span class="val">-1</span></div>
+        <div class="rec rec--kv"><span class="seq">011000</span><span class="lbl">SHADOW TONE</span><span class="val">+2</span></div>
+        <div class="rec rec--kv"><span class="seq">011100</span><span class="lbl">COLOR</span><span class="val">+3</span></div>
+        <div class="rec rec--kv"><span class="seq">011200</span><span class="lbl">SHARPNESS</span><span class="val">+1</span></div>
+        <div class="rec rec--kv"><span class="seq">011300</span><span class="lbl">HIGH ISO NR</span><span class="val">-4</span></div>
+        <div class="rec rec--kv"><span class="seq">011400</span><span class="lbl">ISO</span><span class="val">125</span></div>
+        <div class="rec rec--kv"><span class="seq">011500</span><span class="lbl">EXPOSURE COMP</span><span class="val">Typically -1 to +1, depending on the scene</span></div>
+        <div class="rec rec--cmt"><span class="seq">011600</span><span class="cmt">*</span><span class="cmt-t">END OF LISTING  8 RECIPES</span></div>
+      </section>
+
+      <section class="group report">
+        <h2>C. Source</h2>
+        <div class="rec rec--cmt"><span class="seq">011700</span><span class="cmt">*</span><span class="cmt-t">The recipe files live in the <a class="link-text" href="https://github.com/jdowns525/fujifilm_simulations" target="_blank" rel="noopener">fujifilm_simulations</a> repo on GitHub.</span></div>
+      </section>
+
+      <div class="rule" aria-hidden="true">
+        ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+      </div>
+      
+      <p class="keys">
+        <span><b>ESC</b> main menu</span>
+      </p>
+    </main>
+
+    <script src="js/system.js"></script>
+    <script>
+      (function () {
+        OZY.startClock(document.getElementById("clock"));
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") window.location.href = "index.html";
+        });
+      })();
+    </script>
+  </body>
+</html>

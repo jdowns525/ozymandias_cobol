@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ozymandias — Origin</title>
+    <meta name="description" content="The origin of the name Ozymandias: the pharaoh, the 1818 sonnet by Shelley, and where to read it." />
+    <link rel="icon" href="pokeball.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/my_style.css" />
+  </head>
+
+  <body class="is-scrolling">
+    <main class="terminal">
+      <div class="status">
+        <span class="binary">OZY-ORIGIN / SHELLEY 1818</span>
+        <span class="clock" id="clock">--:--:--</span>
+      </div>
+      <div class="rule" aria-hidden="true">
+        ────────────────────────────────────────────────────────────────────────
+      </div>
+
+      <p class="back"><a class="link-text" href="index.html">&lt;= MAIN MENU</a></p>
+
+      <h1 class="masthead">ORIGIN</h1>
+      <p class="strapline">The origin of the Ozymandias name, which is what I go by.</p>
+
+      <section class="group report">
+        <h2>A. The name</h2>
+        <div class="rec rec--cmt"><span class="seq">000100</span><span class="cmt">*</span><span class="cmt-t"><b>WHO:</b> Ozymandias is the Greek name for the Egyptian pharaoh Ramesses II.</span></div>
+        <div class="rec rec--cmt"><span class="seq">000200</span><span class="cmt">*</span><span class="cmt-t"><b>SOURCE:</b> The Greek historian Diodorus Siculus described a huge Egyptian statue and its inscription in his Bibliotheca historica. That passage is what the poems of 1818 drew on.</span></div>
+      </section>
+
+      <section class="group report">
+        <h2>B. The poem</h2>
+        <div class="rec rec--cmt"><span class="seq">000300</span><span class="cmt">*</span><span class="cmt-t"><b>AUTHOR:</b> Percy Bysshe Shelley (1792-1822).</span></div>
+        <div class="rec rec--cmt"><span class="seq">000400</span><span class="cmt">*</span><span class="cmt-t"><b>WRITTEN:</b> Around Christmas 1817, in December 1817 or early January 1818.</span></div>
+        <div class="rec rec--cmt"><span class="seq">000500</span><span class="cmt">*</span><span class="cmt-t"><b>PUBLISHED:</b> 11 January 1818 in The Examiner, a London weekly, under the pen name Glirastes, which means &quot;lover of dormice&quot;.</span></div>
+        <div class="rec rec--cmt"><span class="seq">000600</span><span class="cmt">*</span><span class="cmt-t"><b>THE CONTEST:</b> Shelley and his friend Horace Smith spent that Christmas together and set themselves a friendly contest to write sonnets on the same subject. Smith's sonnet, also called &quot;Ozymandias&quot;, was published several weeks after Shelley's.</span></div>
+      </section>
+
+      <section class="group report">
+        <h2>C. What it is about</h2>
+        <div class="rec rec--cmt"><span class="seq">000700</span><span class="cmt">*</span><span class="cmt-t">A traveller describes a shattered statue in the desert. The king's boast of power is still on the pedestal, and nothing else is left around it.</span></div>
+        <div class="rec rec--cmt"><span class="seq">000800</span><span class="cmt">*</span><span class="cmt-t">It is usually read as a poem about how power and empire fade, while time and the sculptor's craft outlast them.</span></div>
+      </section>
+
+      <section class="group report">
+        <h2>D. Read it</h2>
+        <div class="rec rec--cmt"><span class="seq">000900</span><span class="cmt">*</span><span class="cmt-t">The full text of the sonnet is on the <a class="link-text" href="https://www.poetryfoundation.org/poems/46565/ozymandias" target="_blank" rel="noopener">Poetry Foundation</a> site.</span></div>
+      </section>
+
+      <section class="group report">
+        <h2>Sources</h2>
+        <div class="rec rec--cmt"><span class="seq">001000</span><span class="cmt">*</span><span class="cmt-t"><a class="link-text" href="https://en.wikipedia.org/wiki/Ozymandias" target="_blank" rel="noopener">Wikipedia: Ozymandias</a></span></div>
+        <div class="rec rec--cmt"><span class="seq">001100</span><span class="cmt">*</span><span class="cmt-t"><a class="link-text" href="https://www.poetryfoundation.org/poems/46565/ozymandias" target="_blank" rel="noopener">Poetry Foundation: Ozymandias</a></span></div>
+      </section>
+
+      <div class="rule" aria-hidden="true">
+        ────────────────────────────────────────────────────────────────────────
+      </div>
+      
+      <p class="keys">
+        <span><b>ESC</b> main menu</span>
+      </p>
+    </main>
+
+    <script src="js/system.js"></script>
+    <script>
+      (function () {
+        OZY.startClock(document.getElementById("clock"));
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") window.location.href = "index.html";
+        });
+      })();
+    </script>
+  </body>
+</html>

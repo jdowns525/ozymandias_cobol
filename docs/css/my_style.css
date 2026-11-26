@@ -217,9 +217,7 @@ body.is-scrolling {
 
 .opt .note {
   color: var(--dim);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 /* Inverse video on select — how 3270 cursor selection actually looked. */
@@ -538,6 +536,30 @@ body.is-scrolling {
   grid-template-columns: 6ch 19ch 16ch 28ch minmax(0, 1fr) 5ch;
 }
 
+.rec--fz {
+  grid-template-columns: 6ch 20ch 24ch 16ch 18ch minmax(0, 1fr);
+}
+
+.rec--kv {
+  grid-template-columns: 6ch 30ch minmax(0, 1fr);
+}
+
+.rec--kv .lbl {
+  color: var(--dim);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.rec--kv .lbl::after {
+  content: " ......................................";
+  color: var(--dimmer);
+}
+
+.rec--kv .val {
+  color: var(--white);
+  overflow-wrap: anywhere;
+}
+
 .rec--cmt {
   grid-template-columns: 6ch 1ch minmax(0, 1fr);
   color: var(--dim);
@@ -585,6 +607,8 @@ body.is-scrolling {
 @media (max-width: 56rem) {
   .rec--tl,
   .rec--gen,
+  .rec--fz,
+  .rec--kv,
   .rec--bld {
     display: block;
     padding: calc(var(--row) * 0.2) 0;
@@ -606,16 +630,29 @@ body.is-scrolling {
 
   .rec--tl .nte,
   .rec--gen > span,
+  .rec--fz > span,
   .rec--bld > span {
     display: block;
   }
 
+  .rec--kv .lbl,
+  .rec--kv .val {
+    display: inline;
+    white-space: normal;
+  }
+
+  .rec--kv .lbl::after {
+    content: ": ";
+  }
+
+  .rec--fz > span::before,
   .rec--gen > span::before,
   .rec--bld > span::before {
     content: attr(data-label) ": ";
     color: var(--dimmer);
   }
 
+  .rec--fz > .mdl::before,
   .rec--bld > .mdl::before {
     content: "";
   }
