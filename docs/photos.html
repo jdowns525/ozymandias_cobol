@@ -97,6 +97,7 @@
             link.href = "#" + cat.slug; nav.appendChild(link);
           });
           nav.hidden = data.categories.length < 2;
+          if (location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
         }
         fetch("photos/photos.json").then(function (r) { return r.json(); }).then(build).catch(function () {
           document.getElementById("sheet").innerHTML = '<p class="blurb">Could not load the photo list.</p>';
