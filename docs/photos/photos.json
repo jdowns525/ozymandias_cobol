@@ -1,0 +1,210 @@
+{
+ "categories": [
+  {
+   "name": "Chicago",
+   "slug": "chicago",
+   "frames": [
+    {
+     "thumb": "photos/chicago/37.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image37.webP"
+    },
+    {
+     "thumb": "photos/chicago/38.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image38.webP"
+    },
+    {
+     "thumb": "photos/chicago/39.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image39.webP"
+    },
+    {
+     "thumb": "photos/chicago/01.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image1.webP"
+    },
+    {
+     "thumb": "photos/chicago/02.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image2.webP"
+    },
+    {
+     "thumb": "photos/chicago/03.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image3.webP"
+    },
+    {
+     "thumb": "photos/chicago/04.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image4.webP"
+    },
+    {
+     "thumb": "photos/chicago/05.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image5.webP"
+    },
+    {
+     "thumb": "photos/chicago/06.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image6.webP"
+    },
+    {
+     "thumb": "photos/chicago/07.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image7.webP"
+    },
+    {
+     "thumb": "photos/chicago/08.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image8.webP"
+    },
+    {
+     "thumb": "photos/chicago/09.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image9.webP"
+    },
+    {
+     "thumb": "photos/chicago/10.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image10.webP"
+    },
+    {
+     "thumb": "photos/chicago/11.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image11.webP"
+    },
+    {
+     "thumb": "photos/chicago/12.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image12.webP"
+    },
+    {
+     "thumb": "photos/chicago/13.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image13.webP"
+    },
+    {
+     "thumb": "photos/chicago/48.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image48.webP"
+    },
+    {
+     "thumb": "photos/chicago/49.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image49.webP"
+    },
+    {
+     "thumb": "photos/chicago/50.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image50.webP"
+    },
+    {
+     "thumb": "photos/chicago/14.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image14.webP"
+    },
+    {
+     "thumb": "photos/chicago/15.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image15.webP"
+    },
+    {
+     "thumb": "photos/chicago/16.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image16.webP"
+    },
+    {
+     "thumb": "photos/chicago/17.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image17.webP"
+    },
+    {
+     "thumb": "photos/chicago/18.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image18.webP"
+    },
+    {
+     "thumb": "photos/chicago/19.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image19.webP"
+    },
+    {
+     "thumb": "photos/chicago/20.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image20.webP"
+    },
+    {
+     "thumb": "photos/chicago/21.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image21.webP"
+    },
+    {
+     "thumb": "photos/chicago/22.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image22.webP"
+    },
+    {
+     "thumb": "photos/chicago/23.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image23.webP"
+    },
+    {
+     "thumb": "photos/chicago/24.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image24.webP"
+    },
+    {
+     "thumb": "photos/chicago/25.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image25.webP"
+    },
+    {
+     "thumb": "photos/chicago/26.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image26.webP"
+    },
+    {
+     "thumb": "photos/chicago/27.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image27.webP"
+    },
+    {
+     "thumb": "photos/chicago/28.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image28.webP"
+    },
+    {
+     "thumb": "photos/chicago/29.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image29.webP"
+    },
+    {
+     "thumb": "photos/chicago/30.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image30.webP"
+    },
+    {
+     "thumb": "photos/chicago/31.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image31.webP"
+    },
+    {
+     "thumb": "photos/chicago/32.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image32.webP"
+    },
+    {
+     "thumb": "photos/chicago/33.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image33.webP"
+    },
+    {
+     "thumb": "photos/chicago/34.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image34.webP"
+    },
+    {
+     "thumb": "photos/chicago/45.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image45.webP"
+    },
+    {
+     "thumb": "photos/chicago/46.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image46.webP"
+    },
+    {
+     "thumb": "photos/chicago/47.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image47.webP"
+    },
+    {
+     "thumb": "photos/chicago/35.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image35.webP"
+    },
+    {
+     "thumb": "photos/chicago/36.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image36.webP"
+    },
+    {
+     "thumb": "photos/chicago/40.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image40.webP"
+    },
+    {
+     "thumb": "photos/chicago/41.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image41.webP"
+    },
+    {
+     "thumb": "photos/chicago/42.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image42.webP"
+    },
+    {
+     "thumb": "photos/chicago/43.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image43.webP"
+    },
+    {
+     "thumb": "photos/chicago/44.webp",
+     "full": "https://jdowns525.github.io/ozymandiasportfolio.github.io/image44.webP"
+    }
+   ]
+  }
+ ]
+}
