@@ -49,3 +49,6 @@ core.chrome*
 .theia/.ltici_apitoken.yml
 vendor/bundle/*
 !vendor/bundle/.keep
+
+# Original photo folders (large). Run tools/add_photos.py to publish them.
+/photos-src/

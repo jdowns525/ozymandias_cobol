@@ -602,6 +602,17 @@ body.is-scrolling {
   gap: 1.2ch;
 }
 
+.cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 3ch;
+  margin: calc(var(--row) * 0.6) 0;
+}
+
+.cats[hidden] {
+  display: none;
+}
+
 .frame {
   position: relative;
   display: block;
