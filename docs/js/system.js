@@ -32,7 +32,7 @@
     { key: "11", name: "SOUNDCLOUD", note: "noises", url: "https://m.soundcloud.com/0zymanndias", external: true, alias: ["soundcloud", "music", "sc"] },
     { key: "12", name: "STRAVA", note: "rides", url: "https://strava.app.link/RF4qezfm0Wb", external: true, alias: ["strava", "rides", "cycling", "bike"] },
     { key: "13", name: "TIKTOK", note: "@0zymanndias", url: "https://www.tiktok.com/@0zymanndias?_t=ZP-904tGFoKYYw&_r=1", external: true, alias: ["tiktok", "tok", "video"] },
-    { key: "14", name: "RIVENDELL", note: "bicycle archive, readers, catalogs", url: "archive.html", external: false, alias: ["rivendell", "riv", "rbw", "atlantis", "reader", "catalogs"] }
+    { key: "14", name: "RIVENDELL RBW", note: "archives, readers, catalogs", url: "archive.html", external: false, alias: ["rivendell", "rivendell rbw archives", "rbw archives", "riv", "rbw", "atlantis", "reader", "catalogs"] }
   ];
 
   var GROUPS = [
