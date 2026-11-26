@@ -458,6 +458,24 @@ body.is-scrolling {
   }
 }
 
+/* 8c. Archive page ========================================================= */
+
+.back {
+  margin: calc(var(--row) * 0.4) 0 0;
+}
+
+.blurb {
+  margin: 0 0 calc(var(--row) * 0.25);
+  color: var(--dim);
+  max-width: 58ch;
+}
+
+.credit {
+  margin: calc(var(--row) * 0.4) 0 0;
+  color: var(--dim);
+  max-width: 62ch;
+}
+
 /* 9. Responsive + motion =================================================== */
 
 @media (prefers-reduced-motion: reduce) {

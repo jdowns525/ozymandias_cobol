@@ -31,13 +31,14 @@
     { key: "10", name: "INSTAGRAM", note: "@0zymanndias", url: "https://www.instagram.com/0zymanndias", external: true, alias: ["instagram", "insta", "ig"] },
     { key: "11", name: "SOUNDCLOUD", note: "noises", url: "https://m.soundcloud.com/0zymanndias", external: true, alias: ["soundcloud", "music", "sc"] },
     { key: "12", name: "STRAVA", note: "rides", url: "https://strava.app.link/RF4qezfm0Wb", external: true, alias: ["strava", "rides", "cycling", "bike"] },
-    { key: "13", name: "TIKTOK", note: "@0zymanndias", url: "https://www.tiktok.com/@0zymanndias?_t=ZP-904tGFoKYYw&_r=1", external: true, alias: ["tiktok", "tok", "video"] }
+    { key: "13", name: "TIKTOK", note: "@0zymanndias", url: "https://www.tiktok.com/@0zymanndias?_t=ZP-904tGFoKYYw&_r=1", external: true, alias: ["tiktok", "tok", "video"] },
+    { key: "14", name: "RIVENDELL", note: "bicycle archive, readers, catalogs", url: "archive.html", external: false, alias: ["rivendell", "riv", "rbw", "atlantis", "reader", "catalogs"] }
   ];
 
   var GROUPS = [
     { title: "Talk", keys: ["0", "1"] },
     { title: "Work", keys: ["2", "3", "4", "5"] },
-    { title: "Files", keys: ["6", "7", "8", "9"] },
+    { title: "Files", keys: ["6", "7", "8", "9", "14"] },
     { title: "Elsewhere", keys: ["10", "11", "12", "13"] }
   ];
 
