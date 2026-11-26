@@ -25,7 +25,7 @@
     { key: "4", name: "ZINE TWO", note: "print, on gumroad", url: "https://downsjo.gumroad.com/l/xjsjw?_gl=1", external: true, alias: ["zine2", "zine two"] },
     { key: "5", name: "BLOG", note: "writing, on medium", url: "https://medium.com/@downsjosseph", external: true, alias: ["blog", "writing", "medium"] },
     { key: "6", name: "FUJI SIMS", note: "8 film recipes, x-trans v", url: "fuji.html", external: false, alias: ["fuji", "sims", "recipes", "film"] },
-    { key: "7", name: "ZINE TEMPLATE", note: "pages .template, free", url: "https://drive.google.com/file/d/1tuN7BKaBPHiA78ve-pesFua62NLJkPsE/view?usp=drive_link", external: true, alias: ["template", "zine template"] },
+    { key: "7", name: "ZINE TEMPLATE", note: "create your own digital zine", url: "https://drive.google.com/file/d/1tuN7BKaBPHiA78ve-pesFua62NLJkPsE/view?usp=drive_link", external: true, alias: ["template", "zine template"] },
     { key: "9", name: "POEM", note: "origin of the ozymandias name.", url: "origin.html", external: false, alias: ["poem", "origin", "shelley", "ozymandias"] },
     { key: "10", name: "INSTAGRAM", note: "@0zymanndias", url: "https://www.instagram.com/0zymanndias", external: true, alias: ["instagram", "insta", "ig"] },
     { key: "11", name: "SOUNDCLOUD", note: "noises", url: "https://m.soundcloud.com/0zymanndias", external: true, alias: ["soundcloud", "music", "sc"] },
